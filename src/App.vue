@@ -1,28 +1,45 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <Navigation />
+    <GalleryMenu />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Navigation from "./components/Navigation.vue";
+import GalleryMenu from "./components/GalleryMenu.vue";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    HelloWorld
-  }
-}
+    Navigation,
+    GalleryMenu,
+  },
+};
 </script>
 
 <style>
+@import url("https://fonts.googleapis.com/css?family=Poppins");
+
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+  margin-top: 25px;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+}
+
+@media screen and (max-width: 800px) {
+  #app {
+    margin: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  
 }
 </style>
