@@ -39,7 +39,5 @@ export default {
     display: flex;
     flex-direction: column;
   }
-
-  
 }
 </style>

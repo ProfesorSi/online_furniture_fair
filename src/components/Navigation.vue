@@ -13,15 +13,29 @@
       <ul>
         <li>
           <img alt="Izdvojeno" src="../assets/group96.png" />
-          <p>Ulaz na sajam</p>
+          <p>
+            <a href="#"
+              >Ulaz na sajam</a
+            >
+          </p>
         </li>
         <li>
           <img alt="Izdvojeno" src="../assets/group94.png" />
-          <p>Izdvojeno</p>
+          <p>
+            <a
+              href="#"
+              >Izdvojeno</a
+            >
+          </p>
         </li>
         <li>
           <img alt="Partneri" src="../assets/group95.png" />
-          <p>Partneri</p>
+          <p>
+            <a
+              href="#"
+              >Partneri</a
+            >
+          </p>
         </li>
       </ul>
     </div>
@@ -50,6 +64,7 @@ export default {
   font-size: 14px;
 }
 
+
 .logo {
   display: flex;
   flex-direction: column;
@@ -69,6 +84,11 @@ export default {
 
 .navigation-menu {
   width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: black;
 }
 
 .navigation-menu img {
