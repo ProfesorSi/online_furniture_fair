@@ -1,19 +1,17 @@
 <template>
   <div id="app">
     <Navigation />
-    <GalleryMenu />
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
 import Navigation from "./components/Navigation.vue";
-import GalleryMenu from "./components/GalleryMenu.vue";
 
 export default {
   name: "App",
   components: {
     Navigation,
-    GalleryMenu,
   },
 };
 </script>

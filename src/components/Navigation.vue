@@ -14,27 +14,19 @@
         <li>
           <img alt="Izdvojeno" src="../assets/group96.png" />
           <p>
-            <a href="#"
-              >Ulaz na sajam</a
-            >
+            <a href="#">Ulaz na sajam</a>
           </p>
         </li>
         <li>
           <img alt="Izdvojeno" src="../assets/group94.png" />
           <p>
-            <a
-              href="#"
-              >Izdvojeno</a
-            >
+            <a href="#">Izdvojeno</a>
           </p>
         </li>
         <li>
           <img alt="Partneri" src="../assets/group95.png" />
           <p>
-            <a
-              href="#"
-              >Partneri</a
-            >
+            <a href="#">Partneri</a>
           </p>
         </li>
       </ul>
@@ -59,11 +51,10 @@ export default {
   align-items: center;
   align-content: center;
   min-width: 300px;
-  max-width: 250px;
+
   min-height: 100%;
   font-size: 14px;
 }
-
 
 .logo {
   display: flex;
