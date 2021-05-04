@@ -85,6 +85,10 @@ export default {};
 
 
 <style scoped>
+
+.partner-detail {
+    padding: 10px;
+}
 .malagic {
   width: 100px;
   height: 100px;
@@ -125,6 +129,7 @@ export default {};
   align-content: center;
   justify-content: space-evenly;
   padding: 10px;
+  width: 250px;
 }
 
 .product img {

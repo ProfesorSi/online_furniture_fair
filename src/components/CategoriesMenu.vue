@@ -10,7 +10,7 @@
               <img
                 alt="Izdvojeno"
                 src="../assets/group1.png"
-                style="width: 65px; max-height: 50px"
+                style="width: 65px; max-height: 100%"
               />
               <p>Dnevni boravak</p>
             </div>
@@ -19,37 +19,110 @@
 
         <div class="image-container">
           <img alt="Izdvojeno" src="../images/kaktus.png" />
+          <div class="shadow">
+            <img
+              alt="Izdvojeno"
+              src="../assets/art_icon.png"
+              style="width: 50px; max-height: 100%"
+            />
+            <p>Art i dekor</p>
+          </div>
         </div>
         <div class="image-container">
           <img alt="Izdvojeno" src="../images/bojanka.png" />
+           <div class="shadow">
+            <img
+              alt="Izdvojeno"
+              src="../assets/dizajn_icon.png"
+              style="width: 50px; max-height: 100%"
+            />
+            <p>Usluge dizajna</p>
+          </div>
         </div>
       </div>
       <div class="row">
         <div class="image-container">
           <img alt="Izdvojeno" src="../images/spavaca.png" />
+          <div class="shadow">
+            <img
+              alt="Izdvojeno"
+              src="../assets/krevet_icon.png"
+              style="width: 60px; max-height: 100%"
+            />
+            <p>Kreveti i spavace sobe</p>
+          </div>
         </div>
 
         <div class="image-container">
           <img alt="Izdvojeno" src="../images/trpezarija.png" />
+          <div class="shadow">
+            <img
+              alt="Izdvojeno"
+              src="../assets/trpezarija_icon.png"
+              style="width: 55px; max-height: 100%"
+            />
+            <p>Trpezarija</p>
+          </div>
         </div>
         <div class="image-container">
           <img alt="Izdvojeno" src="../images/radna_soba.png" />
+            <div class="shadow">
+            <img
+              alt="Izdvojeno"
+              src="../assets/radni_icon.png"
+              style="width: 55px; max-height: 100%"
+            />
+            <p>Kancelarijski namjestaj</p>
+          </div>
         </div>
 
         <div class="image-container">
           <img alt="Izdvojeno" src="../images/majstor.png" />
+            <div class="shadow">
+            <img
+              alt="Izdvojeno"
+              src="../assets/ruka_icon.png"
+              style="width: 50px; max-height: 100%;"
+            /> 
+            <p>Handmade kutak</p>
+          </div>
+           
         </div>
       </div>
       <div class="row">
         <div class="image-container">
           <img alt="Izdvojeno" src="../images/kuhinja.png" />
+          <div class="shadow">
+            <img
+              alt="Izdvojeno"
+              src="../assets/kuhinja_icon.png"
+              style="width: 50px; max-height: 100%"
+            />
+            <p>Kuhinje</p>
+          </div>
         </div>
 
         <div class="image-container">
           <img alt="Izdvojeno" src="../images/garderober.png" />
+          <div class="shadow">
+            <img
+              alt="Izdvojeno"
+              src="../assets/ormari_icon.png"
+              style="width: 55px; max-height: 100%;"
+            /> 
+            <p>Ormari</p>
+          </div>
         </div>
         <div class="image-container">
           <img alt="Izdvojeno" src="../images/outdoor.png" />
+          <div class="shadow">
+            <img
+              alt="Izdvojeno"
+              src="../assets/basta_icon.png"
+              style="width: 50px; max-height: 100%"
+            />
+            <p>Bastovanski program i ostalo</p>
+          </div>
         </div>
       </div>
     </div>

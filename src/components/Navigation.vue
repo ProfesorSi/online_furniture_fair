@@ -12,9 +12,15 @@
     <div class="navigation-menu">
       <ul>
         <li>
-          <img alt="Izdvojeno" src="../assets/group96.png" />
+          <img alt="Izdvojeno" src="../assets/enter_icon.png" />
           <p>
-            <a href="#">Ulaz na sajam</a>
+            <router-link to="/">Ulaz na sajam</router-link>
+          </p>
+        </li>
+        <li>
+          <img alt="Izdvojeno" src="../assets/group_izlagaci.png" />
+          <p>
+            <a href="#">Izlagači</a>
           </p>
         </li>
         <li>
@@ -26,7 +32,7 @@
         <li>
           <img alt="Partneri" src="../assets/group95.png" />
           <p>
-            <a href="#">Partneri</a>
+            <router-link to="/partners">Partneri</router-link>
           </p>
         </li>
       </ul>
@@ -51,7 +57,6 @@ export default {
   align-items: center;
   align-content: center;
   min-width: 300px;
-
   min-height: 100%;
   font-size: 14px;
 }
@@ -82,9 +87,16 @@ a {
   color: black;
 }
 
+a:hover,
+a:active {
+  color: #ffc501;
+}
+
 .navigation-menu img {
   width: 25px;
   height: 25px;
+  object-fit: cover;
+  height: 100%;
 }
 
 .navigation-menu ul {

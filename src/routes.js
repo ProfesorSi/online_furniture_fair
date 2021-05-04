@@ -2,6 +2,7 @@ import CategoriesMenu from './components/CategoriesMenu.vue';
 import CategoryView from './Views/CategoryView.vue';
 import ProductDetailView from './Views/ProductDetailView.vue';
 import PartnerDetailView from './Views/PartnerDetailView.vue';
+import PartnersView from './Views/PartnersView.vue';
 
 
 export const routes = [
@@ -21,6 +22,11 @@ export const routes = [
         name: 'ProductDetailView',
         component: ProductDetailView
     }, 
+    {
+        path: '/partners',
+        name: 'Partners',
+        component: PartnersView
+    },
     {
         path: '/partner/:id',
         name: 'PartnerDetailView',
