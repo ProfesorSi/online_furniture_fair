@@ -42,7 +42,7 @@
         Adapted mr savings venture it or comfort affixed friends.
       </p>
     </div>
-    <br>
+    <br />
     <h3>Proizvodi</h3>
     <div class="products">
       <div class="product">
@@ -79,15 +79,16 @@
 
 
 <script>
-export default {};
+export default {
+
+};
 </script>
 
 
 
 <style scoped>
-
 .partner-detail {
-    padding: 10px;
+  padding: 10px;
 }
 .malagic {
   width: 100px;
@@ -144,19 +145,18 @@ span {
 }
 
 @media screen and (max-width: 800px) {
+  .vendor-contact {
+    display: flex;
+    justify-content: center;
+  }
 
-    .vendor-contact {
-        display: flex;
-        justify-content: center;
-    }
+  h3 {
+    text-align: center;
+  }
 
-    h3 {
-        text-align: center;
-    }
-
-    .products {
-        display: flex;
-        flex-direction: column;
-    }
+  .products {
+    display: flex;
+    flex-direction: column;
+  }
 }
 </style>

@@ -3,7 +3,14 @@
     <!-- Photo Grid -->
     <div class="categories-menu">
       <div class="row">
-        <router-link to="/categories/1">
+        <router-link
+          :to="{
+            name: 'CategoryView',
+            path: 'kategorija',
+            params: { category: `${this.categories[1]}` },
+            query: { kategorija: `${this.categories[1]}` },
+          }"
+        >
           <div class="image-container">
             <img alt="Izdvojeno" src="../images/soba.png" />
             <div class="shadow">
@@ -12,118 +19,200 @@
                 src="../assets/group1.png"
                 style="width: 65px; max-height: 100%"
               />
-              <p>Dnevni boravak</p>
+              <p>{{ categories[1] }}</p>
             </div>
           </div>
         </router-link>
 
-        <div class="image-container">
-          <img alt="Izdvojeno" src="../images/kaktus.png" />
-          <div class="shadow">
-            <img
-              alt="Izdvojeno"
-              src="../assets/art_icon.png"
-              style="width: 50px; max-height: 100%"
-            />
-            <p>Art i dekor</p>
+        <router-link
+          :to="{
+            name: 'CategoryView',
+            path: 'kategorija',
+            params: { category: `${this.categories[2]}` },
+            query: { kategorija: `${this.categories[2]}` },
+          }"
+        >
+          <div class="image-container">
+            <img alt="Izdvojeno" src="../images/kaktus.png" />
+            <div class="shadow">
+              <img
+                alt="Izdvojeno"
+                src="../assets/art_icon.png"
+                style="width: 50px; max-height: 100%"
+              />
+              <p>{{ categories[2] }}</p>
+            </div>
           </div>
-        </div>
-        <div class="image-container">
-          <img alt="Izdvojeno" src="../images/bojanka.png" />
-           <div class="shadow">
-            <img
-              alt="Izdvojeno"
-              src="../assets/dizajn_icon.png"
-              style="width: 50px; max-height: 100%"
-            />
-            <p>Usluge dizajna</p>
+        </router-link>
+        <router-link
+          :to="{
+            name: 'CategoryView',
+            path: 'kategorija',
+            params: { category: `${this.categories[3]}` },
+            query: { kategorija: `${this.categories[3]}` },
+          }"
+        >
+          <div class="image-container">
+            <img alt="Izdvojeno" src="../images/bojanka.png" />
+            <div class="shadow">
+              <img
+                alt="Izdvojeno"
+                src="../assets/dizajn_icon.png"
+                style="width: 50px; max-height: 100%"
+              />
+              <p>{{ categories[3] }}</p>
+            </div>
           </div>
-        </div>
+        </router-link>
       </div>
       <div class="row">
-        <div class="image-container">
-          <img alt="Izdvojeno" src="../images/spavaca.png" />
-          <div class="shadow">
-            <img
-              alt="Izdvojeno"
-              src="../assets/krevet_icon.png"
-              style="width: 60px; max-height: 100%"
-            />
-            <p>Kreveti i spavace sobe</p>
-          </div>
-        </div>
-
-        <div class="image-container">
-          <img alt="Izdvojeno" src="../images/trpezarija.png" />
-          <div class="shadow">
-            <img
-              alt="Izdvojeno"
-              src="../assets/trpezarija_icon.png"
-              style="width: 55px; max-height: 100%"
-            />
-            <p>Trpezarija</p>
-          </div>
-        </div>
-        <div class="image-container">
-          <img alt="Izdvojeno" src="../images/radna_soba.png" />
+        <router-link
+          :to="{
+            name: 'CategoryView',
+            path: 'kategorija',
+            params: { category: `${this.categories[4]}` },
+            query: { kategorija: `${this.categories[4]}` },
+          }"
+        >
+          <div class="image-container">
+            <img alt="Izdvojeno" src="../images/spavaca.png" />
             <div class="shadow">
-            <img
-              alt="Izdvojeno"
-              src="../assets/radni_icon.png"
-              style="width: 55px; max-height: 100%"
-            />
-            <p>Kancelarijski namjestaj</p>
+              <img
+                alt="Izdvojeno"
+                src="../assets/krevet_icon.png"
+                style="width: 60px; max-height: 100%"
+              />
+              <p>{{ categories[4] }}</p>
+            </div>
           </div>
-        </div>
+        </router-link>
 
-        <div class="image-container">
-          <img alt="Izdvojeno" src="../images/majstor.png" />
+        <router-link
+          :to="{
+            name: 'CategoryView',
+            path: 'kategorija',
+            params: { category: `${this.categories[5]}` },
+            query: { kategorija: `${this.categories[5]}` },
+          }"
+        >
+          <div class="image-container">
+            <img alt="Izdvojeno" src="../images/trpezarija.png" />
             <div class="shadow">
-            <img
-              alt="Izdvojeno"
-              src="../assets/ruka_icon.png"
-              style="width: 50px; max-height: 100%;"
-            /> 
-            <p>Handmade kutak</p>
-          </div>
-           
-        </div>
+              <img
+                alt="Izdvojeno"
+                src="../assets/trpezarija_icon.png"
+                style="width: 55px; max-height: 100%"
+              />
+              <p>{{ categories[5] }}</p>
+            </div>
+          </div></router-link
+        >
+
+        <router-link
+          :to="{
+            name: 'CategoryView',
+            path: 'kategorija',
+            params: { category: `${this.categories[6]}` },
+            query: { kategorija: `${this.categories[6]}` },
+          }"
+        >
+          <div class="image-container">
+            <img alt="Izdvojeno" src="../images/radna_soba.png" />
+            <div class="shadow">
+              <img
+                alt="Izdvojeno"
+                src="../assets/radni_icon.png"
+                style="width: 55px; max-height: 100%"
+              />
+              <p>{{ categories[6] }}</p>
+            </div>
+          </div></router-link
+        >
+
+        <router-link
+          :to="{
+            name: 'CategoryView',
+            path: 'kategorija',
+            params: { category: `${this.categories[7]}` },
+            query: { kategorija: `${this.categories[7]}` },
+          }"
+        >
+          <div class="image-container">
+            <img alt="Izdvojeno" src="../images/majstor.png" />
+            <div class="shadow">
+              <img
+                alt="Izdvojeno"
+                src="../assets/ruka_icon.png"
+                style="width: 50px; max-height: 100%"
+              />
+              <p>{{ categories[7] }}</p>
+            </div>
+          </div></router-link
+        >
       </div>
       <div class="row">
-        <div class="image-container">
-          <img alt="Izdvojeno" src="../images/kuhinja.png" />
-          <div class="shadow">
-            <img
-              alt="Izdvojeno"
-              src="../assets/kuhinja_icon.png"
-              style="width: 50px; max-height: 100%"
-            />
-            <p>Kuhinje</p>
-          </div>
-        </div>
+        <router-link
+          :to="{
+            name: 'CategoryView',
+            path: 'kategorija',
+            params: { category: `${this.categories[8]}` },
+            query: { kategorija: `${this.categories[8]}` },
+          }"
+        >
+          <div class="image-container">
+            <img alt="Izdvojeno" src="../images/kuhinja.png" />
+            <div class="shadow">
+              <img
+                alt="Izdvojeno"
+                src="../assets/kuhinja_icon.png"
+                style="width: 50px; max-height: 100%"
+              />
+              <p>{{ categories[8] }}</p>
+            </div>
+          </div></router-link
+        >
 
-        <div class="image-container">
-          <img alt="Izdvojeno" src="../images/garderober.png" />
-          <div class="shadow">
-            <img
-              alt="Izdvojeno"
-              src="../assets/ormari_icon.png"
-              style="width: 55px; max-height: 100%;"
-            /> 
-            <p>Ormari</p>
-          </div>
-        </div>
-        <div class="image-container">
-          <img alt="Izdvojeno" src="../images/outdoor.png" />
-          <div class="shadow">
-            <img
-              alt="Izdvojeno"
-              src="../assets/basta_icon.png"
-              style="width: 50px; max-height: 100%"
-            />
-            <p>Bastovanski program i ostalo</p>
-          </div>
-        </div>
+        <router-link
+          :to="{
+            name: 'CategoryView',
+            path: 'kategorija',
+            params: { category: `${this.categories[9]}` },
+            query: { kategorija: `${this.categories[9]}` },
+          }"
+        >
+          <div class="image-container">
+            <img alt="Izdvojeno" src="../images/garderober.png" />
+            <div class="shadow">
+              <img
+                alt="Izdvojeno"
+                src="../assets/ormari_icon.png"
+                style="width: 55px; max-height: 100%"
+              />
+              <p>{{ categories[9] }}</p>
+            </div>
+          </div></router-link
+        >
+
+        <router-link
+          :to="{
+            name: 'CategoryView',
+            path: 'kategorija',
+            params: { category: `${this.categories[10]}` },
+            query: { kategorija: `${this.categories[10]}` },
+          }"
+        >
+          <div class="image-container">
+            <img alt="Izdvojeno" src="../images/outdoor.png" />
+            <div class="shadow">
+              <img
+                alt="Izdvojeno"
+                src="../assets/basta_icon.png"
+                style="width: 50px; max-height: 100%"
+              />
+              <p>{{ categories[10] }}</p>
+            </div>
+          </div></router-link
+        >
       </div>
     </div>
   </div>
@@ -132,7 +221,22 @@
 
 <script>
 export default {
-  components: {},
+  data() {
+    return {
+      categories: {
+        1: "Dnevni boravak",
+        2: "Art i dekor",
+        3: "Usluge dizajna",
+        4: "Kreveti i spavace sobe",
+        5: "Trpezarija",
+        6: "Kancelarijski namjestaj",
+        7: "Handmade kutak",
+        8: "Kuhinje",
+        9: "Ormari",
+        10: "Bastovanski program i ostalo",
+      },
+    };
+  },
 };
 </script>
 
@@ -194,6 +298,8 @@ body {
   padding: 10px;
   border-radius: 30px;
 }
+
+
 
 @media screen and (max-width: 800px) {
   .categories-menu {

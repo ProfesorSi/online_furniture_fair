@@ -42,17 +42,11 @@
     <div class="product-container">
       <div class="image"><img alt="Izdvojeno" src="../assets/sofa2.png" /></div>
       <div class="product-description">
-        <h2>Suprima dvosjed</h2>
+        <h2>{{title}}</h2>
         <p>
-          She suspicion dejection saw instantly. Well deny may real one told yet
-          saw hard dear. Bed chief house rapid right the. Set noisy one state
-          tears which. No girl oh part must fact high my he. Simplicity in
-          excellence melancholy as remarkably discovered. Own partiality
-          motionless was old excellence she inquietude contrasted. Sister giving
-          so wicket cousin of an he rather marked. Of on game part body rich.
-          Adapted mr savings venture it or comfort affixed friends.
+         {{description}}
         </p>
-       <p class="price"> 1560KM</p>
+        <p class="price">{{price}}KM</p>
       </div>
     </div>
   </div>
@@ -60,15 +54,24 @@
 
 
 <script>
-export default {};
+export default {
+  props: {
+    title: String,
+    description: String,
+    price: Number,
+    imageURL: String,
+  },
+};
 </script>
 
 
 <style scoped>
 .product-detail {
-  padding-right: 70px;
+  /* padding-right: 70px; */
+  width: 100%;
 }
 .header {
+  width: 100%;
   display: flex;
   justify-content: space-between;
   margin-bottom: 50px;
@@ -80,10 +83,10 @@ export default {};
 }
 
 .vendor-info {
-    display: flex;
-    flex-direction: column;
-    margin-top: -15px;
-    margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+  margin-top: -15px;
+  margin-left: 20px;
 }
 .vendor-info h3 {
   font: bold;
@@ -99,7 +102,9 @@ export default {};
   margin: 5px;
 }
 
-.phone_icon, .mail_icon, .www_icon {
+.phone_icon,
+.mail_icon,
+.www_icon {
   background: yellow;
   border-radius: 50%;
   padding: 5px;
@@ -114,7 +119,9 @@ export default {};
 
 .product-description {
   margin-top: -26px;
-  width: 60%;
+  width: 100%;
+  padding: 20px;
+  padding-top: 0;
 }
 
 .product-description p {
@@ -122,7 +129,7 @@ export default {};
 }
 
 .price {
-    color: #ffc501;
+  color: #ffc501;
 }
 
 @media screen and (max-width: 800px) {

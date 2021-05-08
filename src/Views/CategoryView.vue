@@ -11,63 +11,31 @@
 
     <div class="row">
       <!-- <router-link to="/product/1">  </router-link> -->
-      <router-link to="/product/1">
-        <div class="image-container">
+
+      <div
+        class="image-container"
+        v-for="(product, index) in furniture"
+        :key="index"
+      >
+        <router-link
+          :to="{
+            name: 'ProductDetailView',
+            params: {
+              id: product.id,
+              title: product.title,
+              description: product.description,
+              price: product.price,
+              imageURL: product.imageURL,
+            },
+            props: { title: product.title, description: product.description },
+          }"
+        >
           <img alt="Izdvojeno" src="../assets/sofa1.png" />
           <p>
-            Suprima dvosjed <br />
-            <span>1560KM</span>
-          </p>
-        </div></router-link
-      >
-      <div class="image-container">
-        <img alt="Izdvojeno" src="../assets/sofa2.png" />
-        <p>
-          Suprima dvosjed <br />
-          <span>1560KM</span>
-        </p>
-      </div>
-      <div class="image-container">
-        <img alt="Izdvojeno" src="../assets/sofa2.png" />
-        <p>
-          Suprima dvosjed <br />
-          <span>1560KM</span>
-        </p>
-      </div>
-      <div class="image-container">
-        <img alt="Izdvojeno" src="../assets/sofa1.png" />
-        <p>
-          Suprima dvosjed <br />
-          <span>1560KM</span>
-        </p>
-      </div>
-      <div class="image-container">
-        <img alt="Izdvojeno" src="../assets/sofa1.png" />
-        <p>
-          Suprima dvosjed <br />
-          <span>1560KM</span>
-        </p>
-      </div>
-      <div class="image-container">
-        <img alt="Izdvojeno" src="../assets/sofa2.png" />
-        <p>
-          Suprima dvosjed <br />
-          <span>1560KM</span>
-        </p>
-      </div>
-      <div class="image-container">
-        <img alt="Izdvojeno" src="../assets/sofa2.png" />
-        <p>
-          Suprima dvosjed <br />
-          <span>1560KM</span>
-        </p>
-      </div>
-      <div class="image-container">
-        <img alt="Izdvojeno" src="../assets/sofa1.png" />
-        <p>
-          Suprima dvosjed <br />
-          <span>1560KM</span>
-        </p>
+            {{ product.title }} <br />
+            <span>{{ product.price }}KM</span>
+          </p></router-link
+        >
       </div>
     </div>
   </div>
@@ -75,7 +43,24 @@
 
 
 <script>
-export default {};
+import axios from "axios";
+
+export default {
+  props: {
+    category: String
+  },
+  data() {
+    return {
+      furniture: [],
+    };
+  },
+  mounted() {
+    axios.get("http://localhost:8080/api/products/" + this.category).then((response) => {
+      console.log(this.category);
+      this.furniture = response.data;
+    });
+  },
+};
 </script>
 
 

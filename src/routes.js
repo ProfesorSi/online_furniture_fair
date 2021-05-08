@@ -12,15 +12,17 @@ export const routes = [
         component: CategoriesMenu
     },
     {
-        path: '/categories/:id', /* ovdje ce biti dodat parametar koji ce oznacavati koja je kategorija */
+        path: '/:id', /* ovdje ce biti dodat parametar koji ce oznacavati koja je kategorija */
         name: 'CategoryView',
-        component: CategoryView
+        component: CategoryView,
+        props: true
 
     },
     {
         path: '/product/:id',
         name: 'ProductDetailView',
-        component: ProductDetailView
+        component: ProductDetailView,
+        props: true
     }, 
     {
         path: '/partners',
