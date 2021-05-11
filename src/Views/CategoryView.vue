@@ -30,11 +30,13 @@
             props: { title: product.title, description: product.description },
           }"
         >
-          <img alt="Izdvojeno" src="../assets/sofa1.png" />
-          <p>
-            {{ product.title }} <br />
-            <span>{{ product.price }}KM</span>
-          </p></router-link
+          <div class="image">
+            <img alt="Izdvojeno" :src="product.imageURL" />
+            <p>
+              {{ product.title }} <br />
+              <span>{{ product.price }}KM</span>
+            </p>
+          </div></router-link
         >
       </div>
     </div>
@@ -47,7 +49,7 @@ import axios from "axios";
 
 export default {
   props: {
-    category: String
+    category: String,
   },
   data() {
     return {
@@ -55,10 +57,12 @@ export default {
     };
   },
   mounted() {
-    axios.get("http://localhost:8080/api/products/" + this.category).then((response) => {
-      console.log(this.category);
-      this.furniture = response.data;
-    });
+    axios
+      .get("https://crud.sajamnamjestaja.com/api/products/" + this.category)
+      .then((response) => {
+        console.log(this.category);
+        this.furniture = response.data;
+      });
   },
 };
 </script>
@@ -72,17 +76,18 @@ export default {
 .row {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-evenly;
 }
 
-.image-container {
+.image-container, .image {
   width: 300px;
-  height: auto;
-  padding: 20px;
+  height: 250px;
+  margin-bottom: 100px;
 }
 
 img {
   width: 100%;
-  height: 80%;
+  height: 100%;
   border-radius: 20px;
   object-fit: cover;
 }

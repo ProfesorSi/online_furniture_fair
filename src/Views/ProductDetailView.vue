@@ -40,13 +40,13 @@
     </div>
 
     <div class="product-container">
-      <div class="image"><img alt="Izdvojeno" src="../assets/sofa2.png" /></div>
+      <div class="image"><img alt="Izdvojeno" :src="imageURL" /></div>
       <div class="product-description">
-        <h2>{{title}}</h2>
+        <h2>{{ title }}</h2>
         <p>
-         {{description}}
+          {{ description }}
         </p>
-        <p class="price">{{price}}KM</p>
+        <p class="price">{{ price }}KM</p>
       </div>
     </div>
   </div>
@@ -75,6 +75,18 @@ export default {
   display: flex;
   justify-content: space-between;
   margin-bottom: 50px;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+}
+
+.image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
 }
 
 .malagic {
