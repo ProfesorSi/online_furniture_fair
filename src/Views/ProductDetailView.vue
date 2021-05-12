@@ -61,6 +61,9 @@ export default {
     price: Number,
     imageURL: String,
   },
+  methods: {
+    
+  },
 };
 </script>
 
@@ -78,13 +81,13 @@ export default {
 }
 
 .image {
-  width: 100%;
-  height: 100%;
+  width: 500px;
+  height: 250px;
 }
 
 .image img {
   width: 100%;
-  height: 100%;
+  height: auto;
   object-fit: cover;
   border-radius: 10px;
 }

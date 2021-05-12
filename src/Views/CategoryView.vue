@@ -79,7 +79,8 @@ export default {
   justify-content: space-evenly;
 }
 
-.image-container, .image {
+.image-container,
+.image {
   width: 300px;
   height: 250px;
   margin-bottom: 100px;

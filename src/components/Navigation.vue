@@ -20,7 +20,13 @@
         <li>
           <img alt="Izdvojeno" src="../assets/group_izlagaci.png" />
           <p>
-            <a href="#">Izlagači</a>
+            <router-link
+          :to="{
+            name: 'Exhibitors',
+            path: '/exhibitors'
+        
+          }"
+        >Izlagači</router-link>
           </p>
         </li>
         <li>
@@ -32,7 +38,13 @@
         <li>
           <img alt="Partneri" src="../assets/group95.png" />
           <p>
-            <router-link to="/partners">Partneri</router-link>
+             <router-link
+          :to="{
+            name: 'Partners',
+            path: '/partners'
+        
+          }"
+        >Partneri</router-link>
           </p>
         </li>
       </ul>
