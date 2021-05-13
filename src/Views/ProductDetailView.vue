@@ -158,7 +158,14 @@ export default {
   .header {
     width: 100%;
     display: flex;
+    flex-direction: column;
     justify-content: center;
+  }
+
+  .image {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
   }
 
   .icons {
@@ -168,9 +175,8 @@ export default {
   .product-container {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
+    justify-content: space-between;
+    
   }
 }
 </style>

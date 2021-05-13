@@ -137,9 +137,12 @@ a:active {
 @media screen and (max-width: 800px) {
   .navigation {
     margin: 0;
+    margin-bottom: 30px;
     display: flex;
     flex-direction: column;
     min-width: 100%;
+
+    
   }
 
   .navigation-menu {

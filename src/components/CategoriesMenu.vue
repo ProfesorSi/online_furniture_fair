@@ -229,7 +229,7 @@ export default {
         3: "Usluge dizajna",
         4: "Kreveti i spavace sobe",
         5: "Trpezarija",
-        6: "Kancelarijski namjestaj",
+        6: "Kancelarijski namještaj",
         7: "Handmade kutak",
         8: "Kuhinje",
         9: "Ormari",
