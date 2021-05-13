@@ -58,7 +58,7 @@ export default {
   },
   mounted() {
     axios
-      .get("https://crud.sajamnamjestaja.com/api/products/" + this.category)
+      .get("https://crud.sajamnamjestaja.com/api/products/category/" + this.category)
       .then((response) => {
         console.log(this.category);
         this.furniture = response.data;
