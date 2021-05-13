@@ -28,7 +28,14 @@ export default {
   font-family: "Poppins";
   font-style: normal;
   font-weight: 600;
+
+  
 }
+
+a {
+    text-decoration: none;
+    color: rgb(128, 120, 120);
+  }
 
 @media screen and (max-width: 800px) {
   #app {

@@ -233,7 +233,7 @@ export default {
         7: "Handmade kutak",
         8: "Kuhinje",
         9: "Ormari",
-        10: "Bastovanski program i ostalo",
+        10: "Baštenski program i ostalo",
       },
     };
   },
