@@ -72,6 +72,8 @@ export default {
 .product-detail {
   /* padding-right: 70px; */
   width: 100%;
+  display: flex;
+  flex-direction: column;
 }
 .header {
   width: 100%;
@@ -176,7 +178,10 @@ export default {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    text-align: center;
+    
     
   }
+  
 }
 </style>
