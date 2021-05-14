@@ -1,6 +1,6 @@
 <template>
   <div class="product-detail">
-    <div class="header">
+    <!-- <div class="header">
       <div class="image-left">
         <img
           class="malagic"
@@ -37,7 +37,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
 
     <div class="product-container">
       <div class="image"><img alt="Izdvojeno" :src="imageURL" /></div>

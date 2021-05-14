@@ -10,11 +10,13 @@
         <router-link
           :to="{
             name: 'ExhibitorDetailView',
-            props: {
+            params: {
               title: exhibitor.title,
               description: exhibitor.description,
               imageURL: exhibitor.imageURL,
+
             },
+           
           }"
         >
           <img :src="exhibitor.imageURL" alt="" />

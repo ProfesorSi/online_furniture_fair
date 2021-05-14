@@ -21,12 +21,12 @@
           <img alt="Izdvojeno" src="../assets/group_izlagaci.png" />
           <p>
             <router-link
-          :to="{
-            name: 'Exhibitors',
-            path: '/exhibitors'
-        
-          }"
-        >Izlagači</router-link>
+              :to="{
+                name: 'Exhibitors',
+                path: '/exhibitors',
+              }"
+              >Izlagači</router-link
+            >
           </p>
         </li>
         <li>
@@ -38,13 +38,13 @@
         <li>
           <img alt="Partneri" src="../assets/group95.png" />
           <p>
-             <router-link
-          :to="{
-            name: 'Partners',
-            path: '/partners'
-        
-          }"
-        >Partneri</router-link>
+            <router-link
+              :to="{
+                name: 'Partners',
+                path: '/partners',
+              }"
+              >Partneri</router-link
+            >
           </p>
         </li>
       </ul>
@@ -54,10 +54,7 @@
 
 <script>
 export default {
-  name: "HelloWorld",
-  props: {
-    msg: String,
-  },
+  name: "Navigation",
 };
 </script>
 
@@ -71,10 +68,9 @@ export default {
   min-width: 300px;
   font-size: 14px;
 
-  box-shadow: 5px 5px 5px 5px #a8a6a6;;
+  box-shadow: 5px 5px 5px 5px #a8a6a6;
   margin-right: 25px;
   padding-top: 25px;
- 
 }
 
 .logo {
@@ -141,8 +137,6 @@ a:active {
     display: flex;
     flex-direction: column;
     min-width: 100%;
-
-    
   }
 
   .navigation-menu {

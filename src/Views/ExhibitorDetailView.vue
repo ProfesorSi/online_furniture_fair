@@ -1,29 +1,95 @@
 <template>
   <div class="stand">
-      <h1>Exhibitors details view</h1>
+    <div class="exhibitor">
+      <div class="image-container">
+        <img :src="imageURL" alt="" />
+      </div>
+      <h3>{{ title }}</h3>
+
+      <p>{{ description }}</p>
+      <router-link
+        :to="{ path: '/izlagac/:exhibitor', name: 'ExhibitorProductsView', props: title }"
+        ><button>Pogledajte proizvode</button></router-link
+      >
+    </div>
   </div>
 </template>
 
 <script>
 export default {
-
+  data() {
+    return {
+      exhibitor: String
+    };
+  },
   props: {
     title: String,
     description: String,
-    imageURL: String
-  }
-
-}
+    imageURL: String,
+  },
+};
 </script>
 
 <style scoped>
-
 .stand {
   width: 100%;
-  background-image: url('../../src/images/stand.jpg');
- 
-  /* border-left: 10px solid rgb(158, 158, 158); */
+  height: 100vh;
+  background-image: url("../../src/images/stand.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  color: white;
 
+  /* border-left: 10px solid rgb(158, 158, 158); */
 }
 
+.image-container {
+  width: 180px;
+  height: 180px;
+}
+
+.image-container img {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.5);
+  padding: 10px;
+  border-radius: 10px;
+  margin-left: -12px;
+}
+
+p {
+  padding: 50px;
+  font-weight: 400;
+  text-align: center;
+  font-size: 12px;
+  margin-top: -20px;
+}
+
+.exhibitor {
+  /* width: 500px;
+  
+  float: right;*/
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  width: 500px;
+  text-align: center;
+  height: 100%;
+  position: absolute;
+
+  right: 0;
+  align-items: center;
+  background: rgb(0, 0, 0, 0.8);
+}
+
+button {
+  padding: 15px;
+  background: #ffc501;
+  border: none;
+  font-size: 14px;
+  border-radius: 5px;
+  font-weight: 700;
+  color: white;
+}
 </style>

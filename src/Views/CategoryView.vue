@@ -26,6 +26,7 @@
               description: product.description,
               price: product.price,
               imageURL: product.imageURL,
+              exhibitor: product.exhibitor
             },
             props: { title: product.title, description: product.description },
           }"

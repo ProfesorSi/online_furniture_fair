@@ -6,7 +6,7 @@ import PartnersView from './Views/PartnersView.vue';
 
 import ExhibitorDetailView from './Views/ExhibitorDetailView.vue';
 import ExhibitorsView from './Views/ExhibitorsView.vue';
-
+import ExhibitorProductsView from './Views/ExhibitorProductsView';
 
 
 export const routes = [
@@ -37,6 +37,12 @@ export const routes = [
         path: '/exhibitor/:id',
         name: 'ExhibitorDetailView',
         component: ExhibitorDetailView,
+        props: true
+    },
+    {
+        path: '/izlagac/:exhibitor',
+        name: 'ExhibitorProductsView',
+        component: ExhibitorProductsView,
         props: true
     },
     {
