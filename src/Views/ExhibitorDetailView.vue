@@ -8,7 +8,13 @@
 
       <p>{{ description }}</p>
       <router-link
-        :to="{ path: '/izlagac/:exhibitor', name: 'ExhibitorProductsView', props: title }"
+        :to="{
+          name: 'ExhibitorProductsView',
+          params: {
+            exhibitor: this.exhibitor
+          },
+         
+        }"
         ><button>Pogledajte proizvode</button></router-link
       >
     </div>
@@ -19,7 +25,7 @@
 export default {
   data() {
     return {
-      exhibitor: String
+     exhibitor: String
     };
   },
   props: {
@@ -27,6 +33,11 @@ export default {
     description: String,
     imageURL: String,
   },
+  created() {
+    console.log("title", this.title);
+    this.exhibitor = this.title;
+    console.log("exhibitor", this.exhibitor);
+  }
 };
 </script>
 

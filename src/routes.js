@@ -23,18 +23,18 @@ export const routes = [
 
     },
     {
-        path: '/product/:id',
+        path: '/proizvod/:id',
         name: 'ProductDetailView',
         component: ProductDetailView,
         props: true
     }, 
     {
-        path: '/exhibitors',
+        path: '/izlagaci',
         name: 'Exhibitors',
         component: ExhibitorsView
     },
     {
-        path: '/exhibitor/:id',
+        path: '/izlagac/:id',
         name: 'ExhibitorDetailView',
         component: ExhibitorDetailView,
         props: true

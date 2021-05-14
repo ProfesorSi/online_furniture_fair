@@ -14,9 +14,7 @@
               title: exhibitor.title,
               description: exhibitor.description,
               imageURL: exhibitor.imageURL,
-
             },
-           
           }"
         >
           <img :src="exhibitor.imageURL" alt="" />
@@ -37,7 +35,7 @@ export default {
   },
   mounted() {
     axios
-      .get("https://crud.sajamnamjestaja.com/api/exhibitors")
+      .get("http://localhost:3000/api/exhibitors")
       .then((response) => {
         console.log(response.data);
         this.exhibitors = response.data;
