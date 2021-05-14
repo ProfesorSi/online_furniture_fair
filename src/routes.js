@@ -4,6 +4,10 @@ import ProductDetailView from './Views/ProductDetailView.vue';
 import PartnerDetailView from './Views/PartnerDetailView.vue';
 import PartnersView from './Views/PartnersView.vue';
 
+import ExhibitorDetailView from './Views/ExhibitorDetailView.vue';
+import ExhibitorsView from './Views/ExhibitorsView.vue';
+
+
 
 export const routes = [
     {
@@ -24,6 +28,17 @@ export const routes = [
         component: ProductDetailView,
         props: true
     }, 
+    {
+        path: '/exhibitors',
+        name: 'Exhibitors',
+        component: ExhibitorsView
+    },
+    {
+        path: '/exhibitor/:id',
+        name: 'ExhibitorDetailView',
+        component: ExhibitorDetailView,
+        props: true
+    },
     {
         path: '/partners',
         name: 'Partners',

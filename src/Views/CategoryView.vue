@@ -6,7 +6,7 @@
         src="../assets/group1A.png"
         style="width: 50px; max-height: 50px"
       />
-      <p>Dnevni boravak</p>
+      <p>{{category}}</p>
     </div>
 
     <div class="row">
@@ -34,7 +34,7 @@
             <img alt="Izdvojeno" :src="product.imageURL" />
             <p>
               {{ product.title }} <br />
-              <span>{{ product.price }}KM</span>
+              <span><span style="color: black">Sajamska cijena</span> {{ product.price }}KM</span>
             </p>
           </div></router-link
         >

@@ -61,9 +61,7 @@ export default {
     price: Number,
     imageURL: String,
   },
-  methods: {
-    
-  },
+  methods: {},
 };
 </script>
 
@@ -179,9 +177,6 @@ export default {
     flex-direction: column;
     justify-content: space-between;
     text-align: center;
-    
-    
   }
-  
 }
 </style>

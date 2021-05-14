@@ -69,11 +69,11 @@ export default {
   align-items: center;
   align-content: center;
   min-width: 300px;
-  min-height: 100%;
   font-size: 14px;
 
-  box-shadow: 5px 5px 5px  #a8a6a6;;
+  box-shadow: 5px 5px 5px 5px #a8a6a6;;
   margin-right: 25px;
+  padding-top: 25px;
  
 }
 
