@@ -59,7 +59,7 @@ export default {
   },
   mounted() {
     axios
-      .get("http://localhost:3000/api/products/category/" + this.category)
+      .get("https://furniture-fair-auth-api-gweza.ondigitalocean.app/crud-api/api/products/category/" + this.category)
       .then((response) => {
         console.log(this.category);
         this.furniture = response.data;

@@ -35,7 +35,7 @@ export default {
   },
   mounted() {
     axios
-      .get("http://localhost:3000/api/exhibitors")
+      .get("https://furniture-fair-auth-api-gweza.ondigitalocean.app/crud-api/api/exhibitors")
       .then((response) => {
         console.log(response.data);
         this.exhibitors = response.data;

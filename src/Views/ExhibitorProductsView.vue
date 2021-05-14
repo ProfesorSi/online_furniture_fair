@@ -36,7 +36,7 @@ export default {
     console.log("exhibitor", this.exhibitor);
     axios
       .get(
-        "http://localhost:3000/api/products/izlagac/" +
+        "https://furniture-fair-auth-api-gweza.ondigitalocean.app/crud-api/api/products/izlagac/" +
           this.exhibitor
       )
       .then((response) => {
