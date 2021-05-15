@@ -17,8 +17,10 @@
         v-for="(product, index) in furniture"
         :key="index"
       >
+
         <router-link
           :to="{
+            path: product.id,
             name: 'ProductDetailView',
             params: {
               id: product.id,

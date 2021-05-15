@@ -16,7 +16,7 @@ export const routes = [
         component: CategoriesMenu
     },
     {
-        path: '/:id', /* ovdje ce biti dodat parametar koji ce oznacavati koja je kategorija */
+        path: '/:category', /* ovdje ce biti dodat parametar koji ce oznacavati koja je kategorija */
         name: 'CategoryView',
         component: CategoryView,
         props: true

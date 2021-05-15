@@ -6,7 +6,6 @@
         <router-link
           :to="{
             name: 'CategoryView',
-            path: 'kategorija',
             params: { category: `${this.categories[1]}` },
             query: { kategorija: `${this.categories[1]}` },
           }"

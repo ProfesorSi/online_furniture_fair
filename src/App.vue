@@ -1,9 +1,10 @@
 <template>
   <div id="app">
     <Navigation />
-     <!-- <span class="go-back">
-       <button @click="goBack">Prethodna</button>
-     </span> -->
+    <span class="go-back">
+      <button @click="goBack">Prethodna</button>
+    </span>
+
     <router-view></router-view>
   </div>
 </template>
@@ -19,9 +20,9 @@ export default {
 
   methods: {
     goBack() {
-      return this.$router.go(-1);
-    }
-  }
+      return this.$router.back();
+    },
+  },
 };
 </script>
 
@@ -31,10 +32,14 @@ export default {
 .go-back {
   display: flex;
   cursor: pointer;
+  position: absolute;
+  left: 350px;
+  top: 10px;
 }
 
-button {
-  border: 0;
+.go-back button {
+ padding: 5px;
+ color: black;
 }
 
 #app {
@@ -46,14 +51,12 @@ button {
   font-family: "Poppins";
   font-style: normal;
   font-weight: 600;
-
-  
 }
 
 a {
-    text-decoration: none;
-    color: rgb(128, 120, 120);
-  }
+  text-decoration: none;
+  color: rgb(128, 120, 120);
+}
 
 @media screen and (max-width: 800px) {
   #app {
