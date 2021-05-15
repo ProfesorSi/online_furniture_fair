@@ -16,7 +16,7 @@
         :to="{
           name: 'ExhibitorProductsView',
           params: {
-            exhibitor: this.exhibitor,
+            exhibitor: this.title,
           },
         }"
         ><button>Pogledajte proizvode</button></router-link
@@ -26,16 +26,29 @@
 </template>
 
 <script>
+import axios from "axios";
+
 export default {
   data() {
     return {
-      exhibitor: String,
+      title: "",
+      description: "",
+      imageURL: "",
     };
   },
-  props: {
-    title: String,
-    description: String,
-    imageURL: String,
+    mounted() {
+    axios
+      .get(
+        "https://furniture-fair-auth-api-gweza.ondigitalocean.app/crud-api/api/exhibitors/" +
+          this.$route.params.id
+      )
+      .then((response) => {
+        console.log(response.data);
+        this.title = response.data.title;
+        this.description = response.data.description;
+        this.imageURL = response.data.imageURL;
+        console.log("PHONE", this.phone);
+      });
   },
   created() {
     console.log("title", this.title);

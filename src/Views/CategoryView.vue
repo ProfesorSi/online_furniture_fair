@@ -23,17 +23,7 @@
             name: 'ProductDetailView',
             params: {
               id: product.id,
-              title: product.title,
-              description: product.description,
-              price: product.price,
-              imageURL: product.imageURL,
-              imageURL1: product.imageURL1,
-              imageURL2: product.imageURL2,
-              imageURL3: product.imageURL3,
-
-              exhibitor: product.exhibitor,
             },
-            props: { title: product.title, description: product.description },
           }"
         >
           <div class="image">
@@ -69,7 +59,7 @@ export default {
     axios
       .get(
         "https://furniture-fair-auth-api-gweza.ondigitalocean.app/crud-api/api/products/category/" +
-          this.category
+          this.$route.params.category
       )
       .then((response) => {
         console.log(this.category);

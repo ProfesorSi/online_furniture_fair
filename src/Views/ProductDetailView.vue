@@ -56,32 +56,40 @@ export default {
       phone: "",
       email: "",
       website: "",
+      title: "",
+      description: "",
+      price: "",
+      imageURL: "",
+      imageURL1: "",
+      imageURL2: "",
+      imageURL3: "",
     };
   },
 
   props: {
-    title: String,
-    description: String,
-    price: Number,
-    imageURL: String,
-    imageURL1: String,
-    imageURL2: String,
-    imageURL3: String,
-    exhibitor: String,
+
   },
   methods: {},
   mounted() {
     console.log(this.exhibitor);
     axios
       .get(
-        "https://furniture-fair-auth-api-gweza.ondigitalocean.app/crud-api/api/exhibitors/title/" +
-          this.exhibitor
+        "https://furniture-fair-auth-api-gweza.ondigitalocean.app/crud-api/api/products/" +
+          this.$route.params.id
       )
       .then((response) => {
         console.log(response.data);
-        this.urlString = response.data[0].imageURL;
-        this.phone = response.data[0].phone;
-        this.email = response.data[0].email;
+        this.urlString = response.data.imageURL;
+        this.phone = response.data.phone;
+        this.email = response.data.email;
+        this.title = response.data.title;
+        this.description = response.data.description;
+        this.price = response.data.price;
+        this.imageURL = response.data.imageURL;
+        this.imageURL1 = response.data.imageURL1;
+        this.imageURL2 = response.data.imageURL2;
+        this.imageURL3 = response.data.imageURL3;
+
         console.log("PHONE", this.phone);
       });
   },

@@ -23,7 +23,7 @@
             <router-link
               :to="{
                 name: 'Exhibitors',
-                path: '/izlagaci',
+                path: '/exhibitors',
               }"
               >Izlagači</router-link
             >

@@ -16,6 +16,11 @@ export const routes = [
         component: CategoriesMenu
     },
     {
+        path: '/izlagaci',
+        name: 'Exhibitors',
+        component: ExhibitorsView
+    },
+    {
         path: '/:category', /* ovdje ce biti dodat parametar koji ce oznacavati koja je kategorija */
         name: 'CategoryView',
         component: CategoryView,
@@ -29,18 +34,13 @@ export const routes = [
         props: true
     }, 
     {
-        path: '/izlagaci',
-        name: 'Exhibitors',
-        component: ExhibitorsView
-    },
-    {
         path: '/izlagac/:id',
         name: 'ExhibitorDetailView',
         component: ExhibitorDetailView,
         props: true
     },
     {
-        path: '/izlagac/:exhibitor',
+        path: '/proizvodi/:exhibitor',
         name: 'ExhibitorProductsView',
         component: ExhibitorProductsView,
         props: true
