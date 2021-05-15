@@ -1,6 +1,9 @@
 <template>
   <div id="app">
     <Navigation />
+     <!-- <span class="go-back">
+       <button @click="goBack">Prethodna</button>
+     </span> -->
     <router-view></router-view>
   </div>
 </template>
@@ -13,11 +16,26 @@ export default {
   components: {
     Navigation,
   },
+
+  methods: {
+    goBack() {
+      return this.$router.go(-1);
+    }
+  }
 };
 </script>
 
 <style>
 @import url("https://fonts.googleapis.com/css?family=Poppins");
+
+.go-back {
+  display: flex;
+  cursor: pointer;
+}
+
+button {
+  border: 0;
+}
 
 #app {
   width: 100%;

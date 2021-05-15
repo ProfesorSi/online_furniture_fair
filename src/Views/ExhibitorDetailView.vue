@@ -5,11 +5,17 @@
         <img :src="imageURL" alt="" />
       </div>
       <h3>{{ title }}</h3>
-
+      <span v-if="(title == `Dallas International`)"
+        >Safeta Zajke bb, RAJLOVAC</span
+      >
+       <span v-if="(title == `Dallas International`)"
+        >Maršala Tita 237,MOSTAR</span
+      >
       <p>{{ description }}</p>
       <router-link
         :to="{
           name: 'ExhibitorProductsView',
+          path: '/izlagac/:exhibitor',
           params: {
             exhibitor: this.exhibitor,
           },

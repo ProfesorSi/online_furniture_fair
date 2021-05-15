@@ -2,6 +2,7 @@ import Vue from 'vue';
 import VueRouter from 'vue-router';
 import VueGtag from 'vue-gtag';
 import VueMeta from 'vue-meta'
+import VueRouterBackButton from 'vue-router-back-button'
 
 import App from './App.vue';
 import { routes } from './routes';
@@ -26,6 +27,9 @@ const router = new VueRouter({
   routes,
 
 });
+
+Vue.use(VueRouterBackButton, { router });
+
 
 new Vue({
   render: h => h(App),

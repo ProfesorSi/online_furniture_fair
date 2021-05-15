@@ -10,6 +10,8 @@
         <router-link
           :to="{
             name: 'ExhibitorDetailView',
+            path: '/izlagac/' + exhibitor.id,
+
             params: {
               title: exhibitor.title,
               description: exhibitor.description,
@@ -18,9 +20,10 @@
               imageURL2: exhibitor.imageURL2,
               imageURL3: exhibitor.imageURL3,
             },
+            
           }"
         >
-         <div class="images"> <img :src="exhibitor.imageURL" alt="" /></div>
+          <div class="images"><img :src="exhibitor.imageURL" alt="" /></div>
         </router-link>
       </div>
     </div>
@@ -34,7 +37,7 @@ export default {
   data() {
     return {
       exhibitors: [],
-      exhibitorName: String
+      exhibitorName: String,
     };
   },
   mounted() {
@@ -74,9 +77,7 @@ img {
 
 @media only screen and (max-width: 800px) {
   .flex {
-   columns: 1;
+    columns: 1;
   }
-
-  
 }
 </style>

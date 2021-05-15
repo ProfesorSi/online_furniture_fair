@@ -42,6 +42,13 @@
         <p class="price" v-if="price">{{ price }}KM</p>
       </div>
     </div>
+
+    <router-link
+      v-if="$routerHistory.hasPrevious()"
+      :to="{ path: $routerHistory.previous().path }"
+    >
+      GO BACK
+    </router-link>
   </div>
 </template>
 
@@ -146,7 +153,6 @@ export default {
 
 .image {
   width: 100%;
-  height: 300px;
 }
 
 .image-container {
