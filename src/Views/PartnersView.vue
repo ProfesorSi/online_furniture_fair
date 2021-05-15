@@ -46,6 +46,9 @@ export default {};
 
 .image {
   width: 180px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .image img {

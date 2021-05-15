@@ -1,5 +1,5 @@
 <template>
-  <div class="exhibitors">
+  <div class="exhibitors-container">
     <h2>Izlagači</h2>
     <div class="flex">
       <div
@@ -20,7 +20,7 @@
             },
           }"
         >
-          <img :src="exhibitor.imageURL" alt="" />
+         <div class="images"> <img :src="exhibitor.imageURL" alt="" /></div>
         </router-link>
       </div>
     </div>
@@ -45,6 +45,8 @@ export default {
       .then((response) => {
         console.log(response.data);
         this.exhibitors = response.data;
+        this.exhibitorName = response.data[0].title;
+        console.log("Exhibitiros name", this.exhibitors);
       });
   },
 };
@@ -68,5 +70,13 @@ export default {
 
 img {
   width: 100%;
+}
+
+@media only screen and (max-width: 800px) {
+  .flex {
+   columns: 1;
+  }
+
+  
 }
 </style>

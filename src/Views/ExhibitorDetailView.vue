@@ -1,6 +1,6 @@
 <template>
   <div class="stand">
-    <div class="exhibitor">
+    <div class="exhibitor-container">
       <div class="image-container">
         <img :src="imageURL" alt="" />
       </div>
@@ -11,9 +11,8 @@
         :to="{
           name: 'ExhibitorProductsView',
           params: {
-            exhibitor: this.exhibitor
+            exhibitor: this.exhibitor,
           },
-         
         }"
         ><button>Pogledajte proizvode</button></router-link
       >
@@ -25,7 +24,7 @@
 export default {
   data() {
     return {
-     exhibitor: String
+      exhibitor: String,
     };
   },
   props: {
@@ -37,7 +36,7 @@ export default {
     console.log("title", this.title);
     this.exhibitor = this.title;
     console.log("exhibitor", this.exhibitor);
-  }
+  },
 };
 </script>
 
@@ -77,7 +76,7 @@ p {
   margin-top: -20px;
 }
 
-.exhibitor {
+.exhibitor-container {
   /* width: 500px;
   
   float: right;*/
@@ -103,5 +102,24 @@ button {
   border-radius: 5px;
   font-weight: 700;
   color: white;
+}
+
+@media only screen and (max-width: 800px) {
+  .exhibitor {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .image-container {
+    width: 100%;
+    text-align: center;
+  }
+
+  .image-container img {
+    width: 120px;
+    margin-left: 20px;
+
+  }
 }
 </style>
