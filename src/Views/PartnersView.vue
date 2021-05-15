@@ -62,6 +62,7 @@ export default {};
   .partners {
    display: flex;
    flex-direction: column;
+   justify-content: center;
   }
 }
 </style>
