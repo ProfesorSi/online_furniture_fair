@@ -105,20 +105,12 @@ button {
 }
 
 @media only screen and (max-width: 800px) {
-  .exhibitor {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-
-  .image-container {
+  .stand {
     width: 100%;
-    text-align: center;
   }
 
-  .image-container img {
-    width: 120px;
-
+  .exhibitor-container {
+    width: 100%;
   }
 }
 </style>
