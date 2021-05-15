@@ -5,6 +5,7 @@
         <img class="malagic" :src="urlString" alt="Logo" />
       </div>
       <div class="vendor-info">
+        <h3>{{title }}</h3>
         <div class="icons">
           <li>telefon: {{ phone }}</li>
           <li>email: {{ email }}</li>
