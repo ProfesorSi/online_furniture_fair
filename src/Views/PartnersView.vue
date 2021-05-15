@@ -56,6 +56,11 @@ export default {};
   width: 100%;
   height: 100%;
   object-fit: cover;
-  
+}
+
+@media screen and (max-width: 800px) {
+  .partners {
+   columns: 1;
+  }
 }
 </style>
