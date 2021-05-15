@@ -60,10 +60,12 @@ export default {};
 
 @media screen and (max-width: 800px) {
   .partners {
-   display: flex;
-   flex-direction: column;
-   justify-content: center;
-  
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin-left: 100px;
+    margin-top: 350px;
   }
 }
 </style>
