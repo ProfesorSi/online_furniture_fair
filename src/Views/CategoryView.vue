@@ -1,11 +1,11 @@
 <template>
   <div class="wrapper">
     <div class="shadow">
-      <img
+      <!-- <img
         alt="Izdvojeno"
         src="../assets/group1A.png"
         style="width: 50px; max-height: 50px"
-      />
+      /> -->
       <p>{{ category }}</p>
     </div>
 
@@ -66,11 +66,10 @@ export default {
   },
   mounted() {
     axios
-      // .get(
-      //   "https://furniture-fair-auth-api-gweza.ondigitalocean.app/crud-api/api/products/category/" +
-      //     this.category
-      // )
-      .get("http://localhost:8080/api/products/category/" + this.category)
+      .get(
+        "https://furniture-fair-auth-api-gweza.ondigitalocean.app/crud-api/api/products/category/" +
+          this.category
+      )
       .then((response) => {
         console.log(this.category);
         this.furniture = response.data;

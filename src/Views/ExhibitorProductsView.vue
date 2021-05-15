@@ -67,11 +67,10 @@ export default {
   mounted() {
     console.log("exhibitor", this.exhibitor);
     axios
-    .get("http://localhost:8080/api/products/izlagac/" + this.exhibitor)
-      // .get(
-      //   "https://furniture-fair-auth-api-gweza.ondigitalocean.app/crud-api/api/products/izlagac/" +
-      //     this.exhibitor
-      // )
+      .get(
+        "https://furniture-fair-auth-api-gweza.ondigitalocean.app/crud-api/api/products/izlagac/" +
+          this.exhibitor
+      )
       .then((response) => {
         this.products = response.data;
         console.log(this.products);

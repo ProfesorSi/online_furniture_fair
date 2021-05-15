@@ -4,14 +4,11 @@
       <div class="image-left">
         <img class="malagic" :src="urlString" alt="Logo" />
       </div>
-      <div class="vendor-contact">
-        <div>
-          <img class="malagic" :src="urlString" alt="Logo" />
-        </div>
         <div class="vendor-info">
-          <h3>{{ exhibitor }}</h3>
           <div class="icons">
-            <img
+            <li>telefon: {{ phone }}</li>
+            <li>email: {{ email }}</li>
+            <!-- <img
               class="phone_icon"
               src="../images/icons/phone_icon.png"
               alt="Malagic"
@@ -25,10 +22,10 @@
               class="www_icon"
               src="../images/icons/www_icon.png"
               alt="Malagic"
-            />
+            /> -->
           </div>
         </div>
-      </div>
+      
     </div>
     <div class="product">
       <div class="image-container">
@@ -55,7 +52,10 @@ import axios from "axios";
 export default {
  data() {
    return {
-     urlString: ''
+     urlString: '',
+     phone: '',
+     email: '',
+     website: ''
    }
  },
 
@@ -77,7 +77,9 @@ export default {
       .then((response) => {
         console.log(response.data);
         this.urlString = response.data[0].imageURL;
-        console.log("UR:STRING", this.urlString);
+        this.phone = response.data[0].phone;
+        this.email = response.data[0].email;
+        console.log("PHONE", this.phone);
       });
   },
 };
@@ -118,11 +120,9 @@ export default {
   flex-direction: column;
 }
 
-.icons img {
-  background: yellow;
-  padding: 10px;
-  width: 20px;
-  margin-right: 5px;
+.icons li {
+  list-style-type: none;
+  
 }
 
 .exhibitor {
@@ -167,6 +167,7 @@ export default {
   width: 200px;
   height: 100px;
   margin-top: 10px;
+  padding: 2px;  
 }
 
 @media only screen and (max-width: 1000px) {
