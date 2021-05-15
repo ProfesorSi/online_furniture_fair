@@ -1,6 +1,5 @@
 <template>
   <div class="partners">
-   <h4>Partneri</h4>
     <div class="image">
       <img alt="Izdvojeno" src="../images/partners/face_tv.png" />
     </div>
@@ -22,9 +21,7 @@
     <div class="image">
       <img alt="Izdvojeno" src="../images/partners/mrlja.png" />
     </div>
-    <div class="image">
-      <img alt="Izdvojeno" src="../images/partners/tnt-mali-logo.png" />
-    </div>
+
     <div class="image">
       <img alt="Izdvojeno" src="../images/partners/tnt.png" />
     </div>
@@ -39,21 +36,26 @@ export default {};
 
 <style scoped>
 .partners {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
+  width: 100%;
+  columns: 4;
+  margin: 20px;
+  height: 50vh;
 }
 
 .image {
   width: 180px;
+  height: 120px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 20px;
+  margin-right: 30px;
 }
 
 .image img {
   width: 100%;
-  margin: 10px;
+  height: 100%;
   object-fit: cover;
+  
 }
 </style>

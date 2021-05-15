@@ -136,10 +136,12 @@ a:active {
 }
 
 @media screen and (max-width: 800px) {
-  
+
+
 
   .navigation {
     background: white;
+    
   }
 
   .lista {
