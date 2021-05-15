@@ -47,6 +47,8 @@
             >
           </p>
         </li>
+        <p class="lista">Provjerite izlagače</p>
+        <span class="lista"><img src="../assets/down.jpg" alt=""></span>
       </ul>
     </div>
   </div>
@@ -60,6 +62,9 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+.lista {
+  display: none;
+}
 .navigation {
   display: flex;
   flex-direction: column;
@@ -131,6 +136,12 @@ a:active {
 }
 
 @media screen and (max-width: 800px) {
+
+  .lista {
+    display: block;
+    text-align: center;
+  }
+  
   .navigation {
     margin: 0;
     margin-bottom: 30px;
