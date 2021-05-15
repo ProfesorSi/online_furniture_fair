@@ -60,9 +60,7 @@ export default {};
 
 @media screen and (max-width: 800px) {
   .partners {
-   display: flex;
-   flex-direction: column;
-   justify-content: center;
+   columns: 1;
   
   }
 }
