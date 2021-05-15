@@ -4,11 +4,11 @@
       <div class="image-left">
         <img class="malagic" :src="urlString" alt="Logo" />
       </div>
-        <div class="vendor-info">
-          <div class="icons">
-            <li>telefon: {{ phone }}</li>
-            <li>email: {{ email }}</li>
-            <!-- <img
+      <div class="vendor-info">
+        <div class="icons">
+          <li>telefon: {{ phone }}</li>
+          <li>email: {{ email }}</li>
+          <!-- <img
               class="phone_icon"
               src="../images/icons/phone_icon.png"
               alt="Malagic"
@@ -23,9 +23,8 @@
               src="../images/icons/www_icon.png"
               alt="Malagic"
             /> -->
-          </div>
         </div>
-      
+      </div>
     </div>
     <div class="product">
       <div class="image-container">
@@ -50,14 +49,14 @@
 import axios from "axios";
 
 export default {
- data() {
-   return {
-     urlString: '',
-     phone: '',
-     email: '',
-     website: ''
-   }
- },
+  data() {
+    return {
+      urlString: "",
+      phone: "",
+      email: "",
+      website: "",
+    };
+  },
 
   props: {
     title: String,
@@ -73,7 +72,10 @@ export default {
   mounted() {
     console.log(this.exhibitor);
     axios
-      .get("http://localhost:8080/api/exhibitors/title/" + this.exhibitor)
+      .get(
+        "https://furniture-fair-auth-api-gweza.ondigitalocean.app/crud-api/api/exhibitors/title/" +
+          this.exhibitor
+      )
       .then((response) => {
         console.log(response.data);
         this.urlString = response.data[0].imageURL;
@@ -122,7 +124,6 @@ export default {
 
 .icons li {
   list-style-type: none;
-  
 }
 
 .exhibitor {
@@ -167,7 +168,7 @@ export default {
   width: 200px;
   height: 100px;
   margin-top: 10px;
-  padding: 2px;  
+  padding: 2px;
 }
 
 @media only screen and (max-width: 1000px) {
