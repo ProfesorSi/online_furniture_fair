@@ -10,9 +10,10 @@
         <router-link
           :to="{
             name: 'ExhibitorDetailView',
-            path: '/izlagac/' + exhibitor.id,
+            path: '/izlagac/',
 
             params: {
+              id: exhibitor.id,
               title: exhibitor.title,
               description: exhibitor.description,
               imageURL: exhibitor.imageURL,
@@ -20,6 +21,9 @@
               imageURL2: exhibitor.imageURL2,
               imageURL3: exhibitor.imageURL3,
             },
+            props: {
+              
+            }
             
           }"
         >

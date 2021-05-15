@@ -15,7 +15,6 @@
       <router-link
         :to="{
           name: 'ExhibitorProductsView',
-          path: '/izlagac/:exhibitor',
           params: {
             exhibitor: this.exhibitor,
           },

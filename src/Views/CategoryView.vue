@@ -20,7 +20,6 @@
 
         <router-link
           :to="{
-            path: product.id,
             name: 'ProductDetailView',
             params: {
               id: product.id,
