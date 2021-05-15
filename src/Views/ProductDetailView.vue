@@ -191,6 +191,7 @@ export default {
   }
 
   .product {
+    max-width: 600px;
     display: flex;
     flex-direction: column;
     justify-content: center;
