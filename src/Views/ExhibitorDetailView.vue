@@ -118,7 +118,6 @@ button {
 
   .image-container img {
     width: 120px;
-    margin-left: 20px;
 
   }
 }
