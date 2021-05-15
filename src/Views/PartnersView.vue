@@ -25,11 +25,7 @@
     <div class="image">
       <img alt="Izdvojeno" src="../images/partners/tnt.png" />
     </div>
-    <router-link
-    v-if="$routerHistory.hasPrevious()"
-    :to="{ path: $routerHistory.previous().path }">
-    GO BACK
-</router-link>
+    
   </div>
   
 </template>

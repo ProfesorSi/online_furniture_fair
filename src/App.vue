@@ -1,9 +1,9 @@
 <template>
   <div id="app">
     <Navigation />
-    <span class="go-back">
+    <!-- <span class="go-back">
       <button @click="goBack">Prethodna</button>
-    </span>
+    </span> -->
 
     <router-view></router-view>
   </div>
@@ -19,9 +19,9 @@ export default {
   },
 
   methods: {
-    goBack() {
-      return this.$router.back();
-    },
+    // goBack() {
+    //   return this.$router.back();
+    // },
   },
 };
 </script>
@@ -40,6 +40,7 @@ export default {
 .go-back button {
  padding: 5px;
  color: black;
+
 }
 
 #app {
