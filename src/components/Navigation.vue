@@ -145,6 +145,8 @@ a:active {
   .lista {
     display: block;
     text-align: center;
+    background: white;
+    padding: 10px;
   }
   
   .navigation {
