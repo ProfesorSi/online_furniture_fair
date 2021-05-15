@@ -182,11 +182,12 @@ export default {
   }
   .product-detail {
     width: 100%;
-    display: flex;
+    /* display: flex;
     flex-direction: column;
     justify-content: center;
     align-content: center;
-    align-items: center;
+    align-items: center; */
+    columns: 1;
   }
 
   .product {
