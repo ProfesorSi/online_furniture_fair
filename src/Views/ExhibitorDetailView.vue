@@ -66,6 +66,7 @@ export default {
   padding: 10px;
   border-radius: 10px;
   margin-left: -12px;
+  object-fit: cover;
 }
 
 p {

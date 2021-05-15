@@ -1,10 +1,10 @@
 <template>
   <div class="product-detail">
-    <!-- <div class="header">
+    <div class="header">
       <div class="image-left">
         <img
           class="malagic"
-          src="../images/vendorLogos/malagic_logo.png"
+          :src="imageURL"
           alt="Malagic"
         />
       </div>
@@ -12,12 +12,12 @@
         <div>
           <img
             class="malagic"
-            src="../images/vendorLogos/malagic_logo.png"
+            :src="imageURL"
             alt="Malagic"
           />
         </div>
         <div class="vendor-info">
-          <h3>Malagic</h3>
+          <h3>{{exhibitor}}</h3>
           <div class="icons">
             <img
               class="phone_icon"
@@ -37,7 +37,7 @@
           </div>
         </div>
       </div>
-    </div> -->
+    </div>
 
     <div class="product-container">
       <div class="image"><img alt="Izdvojeno" :src="imageURL" /></div>
@@ -46,7 +46,7 @@
         <p>
           {{ description }}
         </p>
-        <p class="price">{{ price }}KM</p>
+        <p class="price" v-if="price">{{ price }}KM</p>
       </div>
     </div>
   </div>
@@ -60,6 +60,7 @@ export default {
     description: String,
     price: Number,
     imageURL: String,
+    exhibitor: String
   },
   methods: {},
 };
@@ -127,9 +128,9 @@ export default {
 
 .product-container {
   display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  align-content: flex-start;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
 }
 
 .product-description {

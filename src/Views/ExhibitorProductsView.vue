@@ -1,20 +1,48 @@
 <template>
   <div class="exhibitorProducts">
+    <!-- <router-link
+          :to="{
+            name: 'ProductDetailView',
+            params: {
+              id: product.id,
+              title: product.title,
+              description: product.description,
+              price: product.price,
+              imageURL: product.imageURL,
+              exhibitor: product.exhibitor
+            },
+            props: { title: product.title, description: product.description },
+          }"
+        > -->
     <div
       class="image-container"
       v-for="(product, index) in products"
       :key="index"
     >
-      <div class="image">
-        <img alt="Izdvojeno" :src="product.imageURL" />
-        <p>
-          {{ product.title }} <br />
-          <span
-            ><span style="color: black">Sajamska cijena</span>
-            {{ product.price }}KM</span
-          >
-        </p>
-      </div>
+      <router-link
+        :to="{
+          name: 'ProductDetailView',
+          params: {
+            id: product.id,
+            title: product.title,
+            description: product.description,
+            price: product.price,
+            imageURL: product.imageURL,
+            exhibitor: product.exhibitor,
+          },
+        }"
+      >
+        <div class="image">
+          <img alt="Izdvojeno" :src="product.imageURL" />
+          <p>
+            {{ product.title }} <br />
+            <span v-if="product.price"
+              ><span style="color: black">Sajamska cijena</span>
+              {{ product.price }}KM</span
+            >
+          </p>
+        </div>
+      </router-link>
     </div>
   </div>
 </template>
@@ -53,7 +81,6 @@ export default {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  
 }
 .image-container {
   width: 300px;
@@ -62,13 +89,15 @@ export default {
 
 .image {
   width: 250px;
-  height: 150px;
+  height: auto;
   margin: 20px;
+  margin-bottom: 10px;
 }
 
 .image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  border-radius: 10px;
 }
 </style>
