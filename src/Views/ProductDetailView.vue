@@ -2,22 +2,14 @@
   <div class="product-detail">
     <div class="header">
       <div class="image-left">
-        <img
-          class="malagic"
-          :src="imageURL"
-          alt="Malagic"
-        />
+        <img class="malagic" :src="urlString" alt="Logo" />
       </div>
       <div class="vendor-contact">
         <div>
-          <img
-            class="malagic"
-            :src="imageURL"
-            alt="Malagic"
-          />
+          <img class="malagic" :src="urlString" alt="Logo" />
         </div>
         <div class="vendor-info">
-          <h3>{{exhibitor}}</h3>
+          <h3>{{ exhibitor }}</h3>
           <div class="icons">
             <img
               class="phone_icon"
@@ -38,14 +30,18 @@
         </div>
       </div>
     </div>
-
-    <div class="product-container">
-      <div class="image"><img alt="Izdvojeno" :src="imageURL" /></div>
-      <div class="product-description">
-        <h2>{{ title }}</h2>
-        <p>
-          {{ description }}
-        </p>
+    <div class="product">
+      <div class="image-container">
+        <img :src="imageURL" alt="" class="image" width="600" height="400" />
+        <div class="images">
+          <img :src="imageURL1" alt="" />
+          <img :src="imageURL2" alt="" />
+          <img :src="imageURL3" alt="" />
+        </div>
+      </div>
+      <div class="product-details">
+        <h3>{{ title }}</h3>
+        <p>{{ description }}</p>
         <p class="price" v-if="price">{{ price }}KM</p>
       </div>
     </div>
@@ -54,68 +50,52 @@
 
 
 <script>
+import axios from "axios";
+
 export default {
+ data() {
+   return {
+     urlString: ''
+   }
+ },
+
   props: {
     title: String,
     description: String,
     price: Number,
     imageURL: String,
-    exhibitor: String
+    imageURL1: String,
+    imageURL2: String,
+    imageURL3: String,
+    exhibitor: String,
   },
   methods: {},
+  mounted() {
+    console.log(this.exhibitor);
+    axios
+      .get("http://localhost:8080/api/exhibitors/title/" + this.exhibitor)
+      .then((response) => {
+        console.log(response.data);
+        this.urlString = response.data[0].imageURL;
+        console.log("UR:STRING", this.urlString);
+      });
+  },
 };
 </script>
 
 
 <style scoped>
 .product-detail {
-  /* padding-right: 70px; */
   width: 100%;
-  display: flex;
-  flex-direction: column;
 }
+
 .header {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 50px;
-}
-
-.image {
-  width: 500px;
-  height: 250px;
-}
-
-.image img {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  border-radius: 10px;
-}
-
-.malagic {
-  width: 100px;
-  height: 100px;
-}
-
-.vendor-info {
-  display: flex;
-  flex-direction: column;
-  margin-top: -15px;
-  margin-left: 20px;
-}
-.vendor-info h3 {
-  font: bold;
-  margin: 10px;
-}
-
-.vendor-contact {
   display: flex;
   justify-content: space-between;
 }
 
-.icons img {
-  margin: 5px;
+.header img {
+  width: 150px;
 }
 
 .phone_icon,
@@ -126,58 +106,76 @@ export default {
   padding: 5px;
 }
 
-.product-container {
+.vendor-contact {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  align-content: center;
+  justify-content: space-between;
 }
 
-.product-description {
-  margin-top: -26px;
+.vendor-info {
+  display: flex;
+  margin-left: 20px;
+  margin-top: -23px;
+  flex-direction: column;
+}
+
+.icons img {
+  background: yellow;
+  padding: 10px;
+  width: 20px;
+  margin-right: 5px;
+}
+
+.exhibitor {
+  width: 120px;
+}
+
+.exhibitor img {
   width: 100%;
-  padding: 20px;
-  padding-top: 0;
 }
 
-.product-description p {
-  font-weight: 300;
+.product {
+  display: flex;
+  margin-top: 50px;
 }
 
-.price {
-  color: #ffc501;
+.product-details {
+  margin-left: 40px;
 }
 
-@media screen and (max-width: 800px) {
-  .image-left {
-    display: none;
-  }
+.image {
+  width: 100%;
+  height: auto;
+}
 
-  .product-detail {
-    padding-right: 0;
-  }
-  .header {
-    width: 100%;
+.image-container {
+  display: flex;
+  flex-direction: column;
+  width: 600px;
+  height: auto;
+}
+
+.image-container img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.images {
+  display: flex;
+}
+
+.images img {
+  width: 200px;
+  height: 100px;
+  margin-top: 10px;
+}
+
+@media only screen and (max-width: 1000px) {
+  .product {
     display: flex;
     flex-direction: column;
     justify-content: center;
-  }
-
-  .image {
-    width: 100%;
-    height: auto;
-    margin-bottom: 20px;
-  }
-
-  .icons {
-    display: flex;
-  }
-
-  .product-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    text-align: center;
+    align-content: center;
+    align-items: center;
   }
 }
 </style>

@@ -28,6 +28,10 @@
             description: product.description,
             price: product.price,
             imageURL: product.imageURL,
+            imageURL1: product.imageURL1,
+            imageURL2: product.imageURL2,
+            imageURL3: product.imageURL3,
+
             exhibitor: product.exhibitor,
           },
         }"
@@ -63,10 +67,11 @@ export default {
   mounted() {
     console.log("exhibitor", this.exhibitor);
     axios
-      .get(
-        "https://furniture-fair-auth-api-gweza.ondigitalocean.app/crud-api/api/products/izlagac/" +
-          this.exhibitor
-      )
+    .get("http://localhost:8080/api/products/izlagac/" + this.exhibitor)
+      // .get(
+      //   "https://furniture-fair-auth-api-gweza.ondigitalocean.app/crud-api/api/products/izlagac/" +
+      //     this.exhibitor
+      // )
       .then((response) => {
         this.products = response.data;
         console.log(this.products);
@@ -89,7 +94,7 @@ export default {
 
 .image {
   width: 250px;
-  height: auto;
+  height: 140px;
   margin: 20px;
   margin-bottom: 10px;
 }
@@ -97,7 +102,7 @@ export default {
 .image img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   border-radius: 10px;
 }
 </style>

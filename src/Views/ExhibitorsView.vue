@@ -14,6 +14,9 @@
               title: exhibitor.title,
               description: exhibitor.description,
               imageURL: exhibitor.imageURL,
+              imageURL1: exhibitor.imageURL1,
+              imageURL2: exhibitor.imageURL2,
+              imageURL3: exhibitor.imageURL3,
             },
           }"
         >
@@ -31,11 +34,15 @@ export default {
   data() {
     return {
       exhibitors: [],
+      exhibitorName: String
     };
   },
   mounted() {
     axios
-      .get("https://furniture-fair-auth-api-gweza.ondigitalocean.app/crud-api/api/exhibitors")
+    .get("http://localhost:8080/api/exhibitors")
+      // .get(
+      //   "https://furniture-fair-auth-api-gweza.ondigitalocean.app/crud-api/api/exhibitors"
+      // )
       .then((response) => {
         console.log(response.data);
         this.exhibitors = response.data;

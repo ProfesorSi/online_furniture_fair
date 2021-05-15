@@ -6,7 +6,7 @@
         src="../assets/group1A.png"
         style="width: 50px; max-height: 50px"
       />
-      <p>{{category}}</p>
+      <p>{{ category }}</p>
     </div>
 
     <div class="row">
@@ -26,7 +26,11 @@
               description: product.description,
               price: product.price,
               imageURL: product.imageURL,
-              exhibitor: product.exhibitor
+              imageURL1: product.imageURL1,
+              imageURL2: product.imageURL2,
+              imageURL3: product.imageURL3,
+
+              exhibitor: product.exhibitor,
             },
             props: { title: product.title, description: product.description },
           }"
@@ -35,7 +39,10 @@
             <img alt="Izdvojeno" :src="product.imageURL" />
             <p>
               {{ product.title }} <br />
-              <span><span style="color: black">Sajamska cijena</span> {{ product.price }}KM</span>
+              <span
+                ><span style="color: black">Sajamska cijena</span>
+                {{ product.price }}KM</span
+              >
             </p>
           </div></router-link
         >
@@ -59,7 +66,11 @@ export default {
   },
   mounted() {
     axios
-      .get("https://furniture-fair-auth-api-gweza.ondigitalocean.app/crud-api/api/products/category/" + this.category)
+      // .get(
+      //   "https://furniture-fair-auth-api-gweza.ondigitalocean.app/crud-api/api/products/category/" +
+      //     this.category
+      // )
+      .get("http://localhost:8080/api/products/category/" + this.category)
       .then((response) => {
         console.log(this.category);
         this.furniture = response.data;

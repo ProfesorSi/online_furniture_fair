@@ -29,12 +29,12 @@
             >
           </p>
         </li>
-        <li>
+        <!-- <li>
           <img alt="Izdvojeno" src="../assets/group94.png" />
           <p>
             <a href="#">Izdvojeno</a>
           </p>
-        </li>
+        </li> -->
         <li>
           <img alt="Partneri" src="../assets/group95.png" />
           <p>
