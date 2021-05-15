@@ -146,7 +146,7 @@ export default {
 
 .image {
   width: 100%;
-  height: auto;
+  height: 300px;
 }
 
 .image-container {
@@ -172,7 +172,23 @@ export default {
   padding: 2px;
 }
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 800px) {
+  .header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+  }
+  .product-detail {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+  }
+
   .product {
     display: flex;
     flex-direction: column;
