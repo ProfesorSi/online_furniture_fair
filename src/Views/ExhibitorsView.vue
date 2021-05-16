@@ -1,6 +1,6 @@
 <template>
   <div class="exhibitors-container">
-    <h2>Izlagači</h2>
+    <h2>Izlagači</h2> <hr>
     <div class="flex">
       <div
         class="image-container"
@@ -72,9 +72,15 @@ img {
 }
 
 @media only screen and (max-width: 600px) {
+
+  h2 {
+    text-align: center;
+  }
   .exhibitors-container {
-    display: flex;
+    /* display: flex;
     justify-content: center;
+    text-align: center; */
+    columns: 2;
     
   }
 
