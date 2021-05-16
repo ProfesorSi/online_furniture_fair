@@ -32,7 +32,6 @@
         alt="Izdvojeno"
         src="../images/partners/stanpromet.png"
     /></a>
-    <a href="https://www.fena.ba/" target="_blank"
       ><img
         class="image stan"
         alt="Izdvojeno"
