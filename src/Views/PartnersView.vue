@@ -1,5 +1,5 @@
 <template>
-  <div class="partners">
+  <div id="partners-content" class="partners">
     <a href="https://www.face.ba/" target="_blank"
       ><img class="image" alt="Izdvojeno" src="../images/partners/face_tv.png"
     /></a>

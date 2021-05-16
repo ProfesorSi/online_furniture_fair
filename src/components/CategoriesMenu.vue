@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div id="categories-content">
     <!-- Photo Grid -->
     <div class="categories-menu">
       <div class="row">

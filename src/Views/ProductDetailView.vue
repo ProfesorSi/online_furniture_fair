@@ -2,13 +2,13 @@
   <div class="product-detail">
     <div class="header">
       <div class="image-left">
-        <img class="malagic" :src="exhibitorImageURL" alt="Logo" />
+        <img v-if="exhibitorImageURL" class="malagic" :src="exhibitorImageURL" alt="Logo" />
       </div>
       <div class="vendor-info">
         <h3>{{ exhibitor }}</h3>
         <div class="icons">
           <li v-if="phone">telefon: {{ phone }}</li>
-          <li v-if="email"> <a :href="mailto">{{ email }}</a></li>
+          <li v-if="email"> <a href="mailto:edis.sijaric95@gmail.com">{{ email }}</a></li>
           
           
           <!-- <img
@@ -91,21 +91,20 @@ export default {
         this.imageURL3 = response.data.imageURL3;
         this.exhibitor = response.data.exhibitor;
 
-      });
-  },
-  beforeMount() {
-      axios
-      .get(
-        "https://furniture-fair-auth-api-gweza.ondigitalocean.app/crud-api/api/exhibitors/title/" +
-          this.$route.params.exhibitor
-      )
-      .then((response) => {
-        this.exhibitorImageURL = response.data[0].imageURL;
-        this.email = response.data[0].email;
-        this.phone = response.data[0].phone;
+        axios
+        .get(
+          "https://furniture-fair-auth-api-gweza.ondigitalocean.app/crud-api/api/exhibitors/title/" +
+            this.exhibitor
+        )
+        .then((response2) => {
+          this.exhibitorImageURL = response2.data[0].imageURL;
+          this.email = response2.data[0].email;
+          this.phone = response2.data[0].phone;
+
+        });
 
       });
-  }
+  },
 };
 </script>
 

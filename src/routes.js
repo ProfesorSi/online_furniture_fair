@@ -21,6 +21,11 @@ export const routes = [
         component: ExhibitorsView
     },
     {
+        path: '/partners',
+        name: 'Partners',
+        component: PartnersView
+    },
+    {
         path: '/:category', /* ovdje ce biti dodat parametar koji ce oznacavati koja je kategorija */
         name: 'CategoryView',
         component: CategoryView,
@@ -44,11 +49,6 @@ export const routes = [
         name: 'ExhibitorProductsView',
         component: ExhibitorProductsView,
         props: true
-    },
-    {
-        path: '/partners',
-        name: 'Partners',
-        component: PartnersView
     },
     {
         path: '/partner/:id',

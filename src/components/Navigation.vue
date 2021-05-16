@@ -14,13 +14,23 @@
         <li>
           <img alt="Izdvojeno" src="../assets/enter_icon.png" />
           <p>
-            <router-link to="/">Ulaz na sajam</router-link>
+            <router-link class="show-on-mobile" v-scroll-to="'#categories-content'" to="/">Ulaz na sajam</router-link>
+            <router-link class="show-on-desktop" to="/">Ulaz na sajam</router-link>
           </p>
         </li>
         <li>
           <img alt="Izdvojeno" src="../assets/group_izlagaci.png" />
           <p>
             <router-link
+              class="show-on-mobile" v-scroll-to="'#exhibitors-content'"
+              :to="{
+                name: 'Exhibitors',
+                path: '/exhibitors',
+              }"
+              >Izlagači</router-link
+            >
+            <router-link
+              class="show-on-desktop"
               :to="{
                 name: 'Exhibitors',
                 path: '/exhibitors',
@@ -39,6 +49,15 @@
           <img alt="Partneri" src="../assets/group95.png" />
           <p>
             <router-link
+              class="show-on-mobile" v-scroll-to="'#partners-content'"
+              :to="{
+                name: 'Partners',
+                path: '/partners',
+              }"
+              >Partneri</router-link
+            >
+            <router-link
+              class="show-on-desktop"
               :to="{
                 name: 'Partners',
                 path: '/partners',
@@ -174,4 +193,12 @@ a:active {
     min-width: 100%;
   }
 }
+
+@media (min-width: 761px) {
+  .show-on-mobile { display: none !important; }
+}
+@media (max-width: 760px) {
+  .show-on-desktop { display: none !important; }
+}
+
 </style>

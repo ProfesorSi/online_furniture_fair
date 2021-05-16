@@ -1,5 +1,5 @@
 <template>
-  <div class="exhibitors-container">
+  <div id="exhibitors-content" class="exhibitors-container">
     <h2>Izlagači</h2> <hr>
     <div class="flex">
       <div
