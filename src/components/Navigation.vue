@@ -98,7 +98,7 @@ export default {
 .logo p {
   text-align: center;
   color: #ffc501;
-  font-size: 18px;
+  font-size: 15px;
 }
 
 .logo p span {
