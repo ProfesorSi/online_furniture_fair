@@ -71,9 +71,17 @@ img {
   width: 100%;
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 600px) {
+  .exhibitors-container {
+    display: flex;
+    justify-content: center;
+    
+  }
+
   .flex {
-    columns: 1;
+    width: 100%;
+     display: flex;
+    justify-content: center;
   }
 }
 </style>

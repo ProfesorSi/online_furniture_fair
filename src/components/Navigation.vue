@@ -48,7 +48,7 @@
           </p>
         </li>
         <p class="lista">Provjerite izlagače</p>
-        <span class="lista"><img src="../assets/down.jpg" alt=""></span>
+        <span class="lista"><img src="../assets/arrow_down.png" alt=""></span>
       </ul>
     </div>
   </div>
@@ -64,6 +64,7 @@ export default {
 <style scoped>
 .lista {
   display: none;
+  margin-top: 100px;
 }
 .navigation {
   display: flex;
