@@ -29,7 +29,7 @@
     </div>
     <div class="product">
       <div class="image-container">
-        <img :src="imageURL" alt="" class="image" width="600" height="400" />
+        <img :src="imageURL" alt="" class="image"/>
         <div class="images">
           <img :src="imageURL1" alt="" />
           <img :src="imageURL2" alt="" />
@@ -165,7 +165,8 @@ export default {
 
 .image-container img {
   width: 100%;
-  object-fit: cover;
+  object-fit: contain;
+  max-height: 400px;
 }
 
 .images {
