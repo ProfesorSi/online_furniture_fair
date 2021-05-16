@@ -8,7 +8,9 @@
         <h3>{{ exhibitor }}</h3>
         <div class="icons">
           <li v-if="phone">telefon: {{ phone }}</li>
-          <li v-if="email">email: {{ email }}</li>
+          <li v-if="email"> <a :href="mailto">{{ email }}</a></li>
+          
+          
           <!-- <img
               class="phone_icon"
               src="../images/icons/phone_icon.png"
@@ -63,7 +65,8 @@ export default {
       imageURL1: "",
       imageURL2: "",
       imageURL3: "",
-      exhibitor: ""
+      exhibitor: "",
+      mailto: "mailto:" + this.email
     };
   },
 
@@ -72,6 +75,7 @@ export default {
   },
   methods: {},
   beforeCreate() {
+    console.log(this.mailto)
     axios
       .get(
         "https://furniture-fair-auth-api-gweza.ondigitalocean.app/crud-api/api/products/" +
