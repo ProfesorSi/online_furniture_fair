@@ -1,31 +1,23 @@
 <template>
   <div class="partners">
-    <div class="image">
-      <img alt="Izdvojeno" src="../images/partners/face_tv.png" />
-    </div>
-    <div class="image">
-      <img alt="Izdvojeno" src="../images/partners/akta.png" />
-    </div>
-    <div class="image">
-      <img alt="Izdvojeno" src="../images/partners/interreg.png" />
-    </div>
-    <div class="image">
-      <img alt="Izdvojeno" src="../images/partners/kalman.jpg" />
-    </div>
-    <div class="image">
-      <img alt="Izdvojeno" src="../images/partners/logo.png" />
-    </div>
-    <div class="image">
-      <img alt="Izdvojeno" src="../images/partners/mrak.png" />
-    </div>
-    <div class="image">
-      <img alt="Izdvojeno" src="../images/partners/mrlja.png" />
-    </div>
+    <img class="image" alt="Izdvojeno" src="../images/partners/face_tv.png" />
+    <img class="image" alt="Izdvojeno" src="../images/partners/akta.png" />
+    <img class="image" alt="Izdvojeno" src="../images/partners/interreg.png" />
+    <img class="image" alt="Izdvojeno" src="../images/partners/kalman.jpg" />
+    <img class="image" alt="Izdvojeno" src="../images/partners/logo.png" />
+    <img class="image" alt="Izdvojeno" src="../images/partners/mrak.png" />
+    <img class="image" alt="Izdvojeno" src="../images/partners/mrlja.png" />
+    <img class="image" alt="Izdvojeno" src="../images/partners/tnt.png" />
+     <img class="image stan" alt="Izdvojeno" src="../images/partners/stanpromet.png" />
+          <img class="image stan" alt="Izdvojeno" src="../images/partners/fena.jpg" />
 
-    <div class="image">
-      <img alt="Izdvojeno" src="../images/partners/tnt.png" />
-    </div>
-    
+    <img
+      class="image"
+      alt="Izdvojeno"
+      src="../images/partners/privredna_komora.png"
+    />
+    <div class="image"><p>VANJSKOTRGOVINSKA KOMORA BOSNE I HERCEGOVINE</p></div>
+   
   </div>
   
 </template>
@@ -38,36 +30,36 @@ export default {};
 
 <style scoped>
 .partners {
-  width: 100%;
-  columns: 4;
-  margin: 20px;
-  height: 50vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding: 5px;
 }
 
 .image {
-  width: 180px;
-  height: 120px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-bottom: 20px;
-  margin-right: 30px;
+  width: 200px;
+  height: 180px;
+  margin: 5px;
+  border: 2px solid black;
+  border-radius: 10px;
 }
+.image p {
+  text-align: center;
+  background: #ffc501;
+  height: 130px;
+  margin: 0;
+  border-radius: 10px;
+  vertical-align: sub;
+  padding-top: 50px;
+  font-weight: 900;
+}
+
+
 
 .image img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  object-fit: contain;
 }
-
 @media screen and (max-width: 800px) {
-  .partners {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    margin-left: 100px;
-    margin-top: 350px;
-  }
 }
 </style>
