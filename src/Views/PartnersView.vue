@@ -30,20 +30,20 @@
         alt="Izdvojeno"
         src="../images/partners/stanpromet.png"
     /></a>
-    <a href="" target="_blank"
+    <a href="https://www.fena.ba/" target="_blank"
       ><img
         class="image stan"
         alt="Izdvojeno"
         src="../images/partners/fena.jpg"
       />
     </a>
-    <a href="" target="_blank"
+    <a href="https://pksa.ba/en/home-2/" target="_blank"
       ><img
         class="image"
         alt="Izdvojeno"
         src="../images/partners/privredna_komora.png"
     /></a>
-    <a href="" target="_blank"
+    <a href="https://www.komorabih.ba/" target="_blank"
       ><div class="image">
         <p>VANJSKOTRGOVINSKA KOMORA BOSNE I HERCEGOVINE</p>
       </div></a
