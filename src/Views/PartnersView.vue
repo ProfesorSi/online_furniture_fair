@@ -36,7 +36,6 @@
         class="image stan"
         alt="Izdvojeno"
         src="../images/partners/fena.jpg"
-      />
     </a>
     <a href="https://pksa.ba/en/home-2/" target="_blank"
       ><img
