@@ -1,25 +1,54 @@
 <template>
   <div class="partners">
-    <img class="image" alt="Izdvojeno" src="../images/partners/face_tv.png" />
-    <img class="image" alt="Izdvojeno" src="../images/partners/akta.png" />
-    <img class="image" alt="Izdvojeno" src="../images/partners/interreg.png" />
-    <img class="image" alt="Izdvojeno" src="../images/partners/kalman.jpg" />
-    <img class="image" alt="Izdvojeno" src="../images/partners/logo.png" />
-    <img class="image" alt="Izdvojeno" src="../images/partners/mrak.png" />
-    <img class="image" alt="Izdvojeno" src="../images/partners/mrlja.png" />
-    <img class="image" alt="Izdvojeno" src="../images/partners/tnt.png" />
-     <img class="image stan" alt="Izdvojeno" src="../images/partners/stanpromet.png" />
-          <img class="image stan" alt="Izdvojeno" src="../images/partners/fena.jpg" />
-
-    <img
-      class="image"
-      alt="Izdvojeno"
-      src="../images/partners/privredna_komora.png"
-    />
-    <div class="image"><p>VANJSKOTRGOVINSKA KOMORA BOSNE I HERCEGOVINE</p></div>
-   
+    <a href="https://www.face.ba/" target="_blank"
+      ><img class="image" alt="Izdvojeno" src="../images/partners/face_tv.png"
+    /></a>
+    <a href="https://www.akta.ba/" target="_blank"
+      ><img class="image" alt="Izdvojeno" src="../images/partners/akta.png"
+    /></a>
+    <a href="http://www.interreg-danube.eu/approved-projects/women-in-business" target="_blank"
+      ><img class="image" alt="Izdvojeno" src="../images/partners/interreg.png"
+    /></a>
+    <a href="https://kalmanradio.ba/" target="_blank"
+      ><img class="image" alt="Izdvojeno" src="../images/partners/kalman.jpg"
+    /></a>
+    <a href="" target="_blank"
+      ><img class="image" alt="Izdvojeno" src="../images/partners/logo.png"
+    /></a>
+    <a href="" target="_blank">
+      <img class="image" alt="Izdvojeno" src="../images/partners/mrak.png"
+    /></a>
+    <a href="" target="_blank">
+      <img class="image" alt="Izdvojeno" src="../images/partners/mrlja.png"
+    /></a>
+    <a href="" target="_blank"
+      ><img class="image" alt="Izdvojeno" src="../images/partners/tnt.png"
+    /></a>
+    <a href="https://www.stanpromet.ba/realestate-sarajevo" target="_blank">
+      <img
+        class="image stan"
+        alt="Izdvojeno"
+        src="../images/partners/stanpromet.png"
+    /></a>
+    <a href="" target="_blank"
+      ><img
+        class="image stan"
+        alt="Izdvojeno"
+        src="../images/partners/fena.jpg"
+      />
+    </a>
+    <a href="" target="_blank"
+      ><img
+        class="image"
+        alt="Izdvojeno"
+        src="../images/partners/privredna_komora.png"
+    /></a>
+    <a href="" target="_blank"
+      ><div class="image">
+        <p>VANJSKOTRGOVINSKA KOMORA BOSNE I HERCEGOVINE</p>
+      </div></a
+    >
   </div>
-  
 </template>
 
 
@@ -53,8 +82,6 @@ export default {};
   padding-top: 50px;
   font-weight: 900;
 }
-
-
 
 .image img {
   width: 100%;
