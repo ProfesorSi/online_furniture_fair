@@ -23,6 +23,7 @@
             name: 'ProductDetailView',
             params: {
               id: product.id,
+              exhibitor: product.exhibitor
             },
           }"
         >

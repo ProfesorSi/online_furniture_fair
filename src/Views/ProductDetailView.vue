@@ -7,8 +7,8 @@
       <div class="vendor-info">
         <h3>{{ exhibitor }}</h3>
         <div class="icons">
-          <li>telefon: {{ phone }}</li>
-          <li>email: {{ email }}</li>
+          <li v-if="phone">telefon: {{ phone }}</li>
+          <li v-if="email">email: {{ email }}</li>
           <!-- <img
               class="phone_icon"
               src="../images/icons/phone_icon.png"
@@ -63,21 +63,21 @@ export default {
       imageURL1: "",
       imageURL2: "",
       imageURL3: "",
+      exhibitor: ""
     };
   },
 
   props: {
-    exhibitor: String
+    // exhibitor: String
   },
   methods: {},
-  beforeMount() {
+  beforeCreate() {
     axios
       .get(
         "https://furniture-fair-auth-api-gweza.ondigitalocean.app/crud-api/api/products/" +
           this.$route.params.id
       )
       .then((response) => {
-        console.log(response.data);
         this.title = response.data.title;
         this.description = response.data.description;
         this.price = response.data.price;
@@ -85,17 +85,17 @@ export default {
         this.imageURL1 = response.data.imageURL1;
         this.imageURL2 = response.data.imageURL2;
         this.imageURL3 = response.data.imageURL3;
+        this.exhibitor = response.data.exhibitor;
 
       });
   },
-  mounted() {
+  beforeMount() {
       axios
       .get(
         "https://furniture-fair-auth-api-gweza.ondigitalocean.app/crud-api/api/exhibitors/title/" +
           this.$route.params.exhibitor
       )
       .then((response) => {
-        console.log("EXHIBITOOOOOR", response.data);
         this.exhibitorImageURL = response.data[0].imageURL;
         this.email = response.data[0].email;
         this.phone = response.data[0].phone;
