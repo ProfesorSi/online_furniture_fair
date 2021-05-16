@@ -100,7 +100,6 @@ export default {
   min-width: 300px;
   font-size: 14px;
   height: 100vh;
-  box-shadow: 5px 5px 5px 5px #a8a6a6;
   margin-right: 25px;
   padding-top: 25px;
 }
