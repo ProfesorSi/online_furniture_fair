@@ -12,17 +12,29 @@
     <div class="navigation-menu">
       <ul>
         <li>
-          <img alt="Izdvojeno" src="../assets/enter_icon.png" />
+          <img class="icon" alt="Izdvojeno" src="../assets/enter_icon.png" />
           <p>
-            <router-link class="show-on-mobile" v-scroll-to="'#categories-content'" to="/">Ulaz na sajam</router-link>
-            <router-link class="show-on-desktop" to="/">Ulaz na sajam</router-link>
+            <router-link
+              class="show-on-mobile"
+              v-scroll-to="'#categories-content'"
+              to="/"
+              >Ulaz na sajam</router-link
+            >
+            <router-link class="show-on-desktop" to="/"
+              >Ulaz na sajam</router-link
+            >
           </p>
         </li>
         <li>
-          <img alt="Izdvojeno" src="../assets/group_izlagaci.png" />
+          <img
+            class="icon"
+            alt="Izdvojeno"
+            src="../assets/group_izlagaci.png"
+          />
           <p>
             <router-link
-              class="show-on-mobile" v-scroll-to="'#exhibitors-content'"
+              class="show-on-mobile"
+              v-scroll-to="'#exhibitors-content'"
               :to="{
                 name: 'Exhibitors',
                 path: '/exhibitors',
@@ -46,10 +58,11 @@
           </p>
         </li> -->
         <li>
-          <img alt="Partneri" src="../assets/group95.png" />
+          <img class="icon" alt="Partneri" src="../assets/group95.png" />
           <p>
             <router-link
-              class="show-on-mobile" v-scroll-to="'#partners-content'"
+              class="show-on-mobile"
+              v-scroll-to="'#partners-content'"
               :to="{
                 name: 'Partners',
                 path: '/partners',
@@ -66,13 +79,6 @@
             >
           </p>
         </li>
-        
-        <div class="strelica">
-          <p class="lista">Provjerite izlagače</p>
-          <span class="lista"
-            ><img class="strelica" src="../assets/arrow_down.png" alt=""
-          /></span>
-        </div>
       </ul>
     </div>
   </div>
@@ -86,14 +92,6 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-.lista {
-  display: none;
-  margin-top: 80px;
-}
-
-.strelica {
- 
-}
 .navigation {
   display: flex;
   flex-direction: column;
@@ -165,15 +163,8 @@ a:active {
 }
 
 @media screen and (max-width: 800px) {
-  .navigation {
-    background: white;
-  }
-
-  .lista {
-    display: block;
-    text-align: center;
-    background: white;
-    padding: 10px;
+  .icon {
+    width: 100%;
   }
 
   .navigation {
@@ -184,21 +175,22 @@ a:active {
     min-width: 100%;
   }
 
-  .navigation-menu {
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-left: -10%;
-    min-width: 100%;
+  .navigation-menu  {
+    width: 100%;
+   margin-left: 80px;
+   text-align: center;
   }
+
 }
 
 @media (min-width: 761px) {
-  .show-on-mobile { display: none !important; }
+  .show-on-mobile {
+    display: none !important;
+  }
 }
 @media (max-width: 760px) {
-  .show-on-desktop { display: none !important; }
+  .show-on-desktop {
+    display: none !important;
+  }
 }
-
 </style>
