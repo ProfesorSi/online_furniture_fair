@@ -28,15 +28,7 @@
     /></a>
     <a href="https://www.stanpromet.ba/realestate-sarajevo" target="_blank">
       <img
-        class="image stan"
-        alt="Izdvojeno"
-        src="../images/partners/stanpromet.png"
-    /></a>
-      ><img
-        class="image stan"
-        alt="Izdvojeno"
-        src="../images/partners/fena.jpg"
-    </a>
+
     <a href="https://pksa.ba/en/home-2/" target="_blank"
       ><img
         class="image"
