@@ -5,10 +5,10 @@
         <img :src="imageURL" alt="" />
       </div>
       <h3>{{ title }}</h3>
-      <span v-if="(title == `Dallas International`)"
+      <span v-if="title == `Dallas International`"
         >Safeta Zajke bb, RAJLOVAC</span
       >
-       <span v-if="(title == `Dallas International`)"
+      <span v-if="title == `Dallas International`"
         >Maršala Tita 237,MOSTAR</span
       >
       <p>{{ description }}</p>
@@ -36,7 +36,10 @@ export default {
       imageURL: "",
     };
   },
-    mounted() {
+  mounted() {
+    console.log("params title", this.$route.params.title);
+    console.log("params id", this.$route.params.id);
+
     axios
       .get(
         "https://furniture-fair-auth-api-gweza.ondigitalocean.app/crud-api/api/exhibitors/" +
@@ -47,14 +50,11 @@ export default {
         this.title = response.data.title;
         this.description = response.data.description;
         this.imageURL = response.data.imageURL;
-        console.log("PHONE", this.phone);
       });
   },
-  created() {
-    console.log("title", this.title);
-    this.exhibitor = this.title;
-    console.log("exhibitor", this.exhibitor);
-  },
+  onUnmounted() {
+    console.log("EXHIBITOR", this.$route.params.exhibitor);
+  }
 };
 </script>
 

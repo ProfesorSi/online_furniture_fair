@@ -13,7 +13,8 @@
             path: '/proizvodi/',
 
             params: {
-              id: exhibitor.id
+              id: exhibitor.id,
+              title: exhibitor.title
             },
             
           }"
@@ -44,7 +45,7 @@ export default {
         console.log(response.data);
         this.exhibitors = response.data;
         this.exhibitorName = response.data[0].title;
-        console.log("Exhibitiros name", this.exhibitors);
+        console.log("Exhibitiros name", this.exhibitorName);
       });
   },
 };

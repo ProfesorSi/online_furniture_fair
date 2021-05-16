@@ -2,7 +2,7 @@
   <div class="product-detail">
     <div class="header">
       <div class="image-left">
-        <img class="malagic" :src="urlString" alt="Logo" />
+        <img class="malagic" :src="exhibitorImageURL" alt="Logo" />
       </div>
       <div class="vendor-info">
         <h3>{{ exhibitor }}</h3>
@@ -31,9 +31,9 @@
       <div class="image-container">
         <img :src="imageURL" alt="" class="image"/>
         <div class="images">
-          <img :src="imageURL1" alt="" />
-          <img :src="imageURL2" alt="" />
-          <img :src="imageURL3" alt="" />
+          <img v-if="imageURL1" :src="imageURL1" alt="" />
+          <img v-if="imageURL2" :src="imageURL2" alt="" />
+          <img v-if="imageURL3" :src="imageURL3" alt="" />
         </div>
       </div>
       <div class="product-details">
@@ -52,7 +52,7 @@ import axios from "axios";
 export default {
   data() {
     return {
-      urlString: "",
+      exhibitorImageURL: "",
       phone: "",
       email: "",
       website: "",
@@ -67,11 +67,10 @@ export default {
   },
 
   props: {
-
+    exhibitor: String
   },
   methods: {},
-  mounted() {
-    console.log(this.exhibitor);
+  beforeMount() {
     axios
       .get(
         "https://furniture-fair-auth-api-gweza.ondigitalocean.app/crud-api/api/products/" +
@@ -79,9 +78,6 @@ export default {
       )
       .then((response) => {
         console.log(response.data);
-        this.urlString = response.data.imageURL;
-        this.phone = response.data.phone;
-        this.email = response.data.email;
         this.title = response.data.title;
         this.description = response.data.description;
         this.price = response.data.price;
@@ -90,9 +86,22 @@ export default {
         this.imageURL2 = response.data.imageURL2;
         this.imageURL3 = response.data.imageURL3;
 
-        console.log("PHONE", this.phone);
       });
   },
+  mounted() {
+      axios
+      .get(
+        "https://furniture-fair-auth-api-gweza.ondigitalocean.app/crud-api/api/exhibitors/title/" +
+          this.$route.params.exhibitor
+      )
+      .then((response) => {
+        console.log("EXHIBITOOOOOR", response.data);
+        this.exhibitorImageURL = response.data[0].imageURL;
+        this.email = response.data[0].email;
+        this.phone = response.data[0].phone;
+
+      });
+  }
 };
 </script>
 
