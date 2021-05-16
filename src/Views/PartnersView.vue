@@ -18,7 +18,7 @@
     <a href="" target="_blank">
       <img class="image" alt="Izdvojeno" src="../images/partners/mrak.png"
     /></a>
-    <a href="" target="_blank">
+    <a href="https://bizbook.ba/" target="_blank">
       <img class="image" alt="Izdvojeno" src="../images/partners/mrlja.png"
     /></a>
     <a href="" target="_blank"
