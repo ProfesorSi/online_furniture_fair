@@ -73,7 +73,7 @@ export default {
 }
 
 .strelica {
-  margin-top: -60px;
+ 
 }
 .navigation {
   display: flex;

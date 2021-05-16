@@ -33,9 +33,9 @@
       <div class="image-container">
         <img :src="imageURL" alt="" class="image"/>
         <div class="images">
-          <img v-if="imageURL1" :src="imageURL1" alt="" />
-          <img v-if="imageURL2" :src="imageURL2" alt="" />
-          <img v-if="imageURL3" :src="imageURL3" alt="" />
+          <img class="image1" v-if="imageURL1" :src="imageURL1" alt="" />
+          <img class="image2" v-if="imageURL2" :src="imageURL2" alt="" />
+          <img class="image3" v-if="imageURL3" :src="imageURL3" alt="" />
         </div>
       </div>
       <div class="product-details">
