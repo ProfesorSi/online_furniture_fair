@@ -81,6 +81,7 @@ img {
     justify-content: center;
     text-align: center; */
     columns: 2;
+    margin-left: 50px;
     
   }
 
