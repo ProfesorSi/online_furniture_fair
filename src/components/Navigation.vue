@@ -47,8 +47,13 @@
             >
           </p>
         </li>
-        <p class="lista">Provjerite izlagače</p>
-        <span class="lista"><img src="../assets/arrow_down.png" alt=""></span>
+        
+        <div class="strelica">
+          <p class="lista">Provjerite izlagače</p>
+          <span class="lista"
+            ><img class="strelica" src="../assets/arrow_down.png" alt=""
+          /></span>
+        </div>
       </ul>
     </div>
   </div>
@@ -64,7 +69,11 @@ export default {
 <style scoped>
 .lista {
   display: none;
-  margin-top: 100px;
+  margin-top: 80px;
+}
+
+.strelica {
+  margin-top: -60px;
 }
 .navigation {
   display: flex;
@@ -137,12 +146,8 @@ a:active {
 }
 
 @media screen and (max-width: 800px) {
-
-
-
   .navigation {
     background: white;
-    
   }
 
   .lista {
@@ -151,7 +156,7 @@ a:active {
     background: white;
     padding: 10px;
   }
-  
+
   .navigation {
     margin: 0;
     margin-bottom: 30px;
