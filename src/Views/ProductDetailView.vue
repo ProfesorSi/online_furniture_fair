@@ -114,12 +114,18 @@ export default {
 
 
 <style scoped>
-.image1, .image2, .image3 {
+.image1,
+.image2,
+.image3 {
   transition: transform 0.2s;
 }
 
-.image1:hover, .image2:hover, .image3:hover {
-  transform: scale(3.5); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+.image1:hover,
+.image2:hover,
+.image3:hover {
+  transform: scale(
+    3.5
+  ); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
   margin-left: auto;
 }
 
@@ -206,6 +212,9 @@ export default {
   padding: 2px;
 }
 
+@media (hover: none) {
+}
+
 @media only screen and (max-width: 1000px) {
   .header {
     display: flex;
@@ -241,10 +250,32 @@ export default {
   }
 
   .images {
-    max-width: 300px;
+    width: 500px;
     display: flex;
-    flex-wrap: wrap;
-    margin: 0 auto;
+    flex-direction: column;
+  }
+
+  .image1,
+  .image2,
+  .image3 {
+    max-width: 400px;
+  }
+
+  .image1,
+  .image2,
+  .image3 {
+    transition: transform 0.2s;
+  }
+
+  .image1:hover,
+  .image2:hover,
+  .image3:hover {
+    transform: scale(
+     2.0
+    ); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+    margin-top: 70px;
+    margin-left: 77px;
+  
   }
 }
 </style>
