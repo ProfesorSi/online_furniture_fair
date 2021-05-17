@@ -65,7 +65,6 @@ export default {
     };
   },
   mounted() {
-    console.log("exhibitor", this.exhibitor);
     axios
       .get(
         "https://furniture-fair-auth-api-gweza.ondigitalocean.app/crud-api/api/products/izlagac/" +
@@ -73,7 +72,6 @@ export default {
       )
       .then((response) => {
         this.products = response.data;
-        console.log(this.products);
       });
   },
 };

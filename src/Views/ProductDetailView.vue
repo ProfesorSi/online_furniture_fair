@@ -81,7 +81,6 @@ export default {
   },
   methods: {},
   beforeCreate() {
-    console.log(this.mailto);
     axios
       .get(
         "https://furniture-fair-auth-api-gweza.ondigitalocean.app/crud-api/api/products/" +

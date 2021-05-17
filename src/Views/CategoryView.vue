@@ -28,11 +28,11 @@
           }"
         >
           <div class="image">
-            <img alt="Izdvojeno" :src="product.imageURL" />
+            <img v-if="product.imageURL" alt="Izdvojeno" :src="product.imageURL" />
             <p>
               {{ product.title }} <br />
               <span
-                ><span style="color: black">Sajamska cijena</span>
+                ><span v-if="product.price" style="color: black">Sajamska cijena</span>
                 {{ product.price }}KM</span
               >
             </p>
@@ -63,7 +63,6 @@ export default {
           this.$route.params.category
       )
       .then((response) => {
-        console.log(this.category);
         this.furniture = response.data;
       });
   },

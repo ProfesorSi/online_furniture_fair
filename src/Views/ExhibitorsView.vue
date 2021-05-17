@@ -42,10 +42,8 @@ export default {
         "https://furniture-fair-auth-api-gweza.ondigitalocean.app/crud-api/api/exhibitors"
       )
       .then((response) => {
-        console.log(response.data);
         this.exhibitors = response.data;
         this.exhibitorName = response.data[0].title;
-        console.log("Exhibitiros name", this.exhibitorName);
       });
   },
 };

@@ -37,8 +37,6 @@ export default {
     };
   },
   mounted() {
-    console.log("params title", this.$route.params.title);
-    console.log("params id", this.$route.params.id);
 
     axios
       .get(
@@ -46,14 +44,12 @@ export default {
           this.$route.params.id
       )
       .then((response) => {
-        console.log(response.data);
         this.title = response.data.title;
         this.description = response.data.description;
         this.imageURL = response.data.imageURL;
       });
   },
   onUnmounted() {
-    console.log("EXHIBITOR", this.$route.params.exhibitor);
   }
 };
 </script>
