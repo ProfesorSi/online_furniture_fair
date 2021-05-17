@@ -2,15 +2,21 @@
   <div class="product-detail">
     <div class="header">
       <div class="image-left">
-        <img v-if="exhibitorImageURL" class="malagic" :src="exhibitorImageURL" alt="Logo" />
+        <img
+          v-if="exhibitorImageURL"
+          class="exhibitor-logo"
+          :src="exhibitorImageURL"
+          alt="Logo"
+        />
       </div>
       <div class="vendor-info">
         <h3>{{ exhibitor }}</h3>
         <div class="icons">
           <li v-if="phone">telefon: {{ phone }}</li>
-          <li v-if="email"> <a href="mailto:edis.sijaric95@gmail.com">{{ email }}</a></li>
-          
-          
+          <li v-if="email">
+            <a href="mailto:edis.sijaric95@gmail.com">{{ email }}</a>
+          </li>
+
           <!-- <img
               class="phone_icon"
               src="../images/icons/phone_icon.png"
@@ -31,7 +37,7 @@
     </div>
     <div class="product">
       <div class="image-container">
-        <img :src="imageURL" alt="" class="image"/>
+        <img :src="imageURL" alt="" class="image" />
         <div class="images">
           <img class="image1" v-if="imageURL1" :src="imageURL1" alt="" />
           <img class="image2" v-if="imageURL2" :src="imageURL2" alt="" />
@@ -66,7 +72,7 @@ export default {
       imageURL2: "",
       imageURL3: "",
       exhibitor: "",
-      mailto: "mailto:" + this.email
+      mailto: "mailto:" + this.email,
     };
   },
 
@@ -75,7 +81,7 @@ export default {
   },
   methods: {},
   beforeCreate() {
-    console.log(this.mailto)
+    console.log(this.mailto);
     axios
       .get(
         "https://furniture-fair-auth-api-gweza.ondigitalocean.app/crud-api/api/products/" +
@@ -92,17 +98,15 @@ export default {
         this.exhibitor = response.data.exhibitor;
 
         axios
-        .get(
-          "https://furniture-fair-auth-api-gweza.ondigitalocean.app/crud-api/api/exhibitors/title/" +
-            this.exhibitor
-        )
-        .then((response2) => {
-          this.exhibitorImageURL = response2.data[0].imageURL;
-          this.email = response2.data[0].email;
-          this.phone = response2.data[0].phone;
-
-        });
-
+          .get(
+            "https://furniture-fair-auth-api-gweza.ondigitalocean.app/crud-api/api/exhibitors/title/" +
+              this.exhibitor
+          )
+          .then((response2) => {
+            this.exhibitorImageURL = response2.data[0].imageURL;
+            this.email = response2.data[0].email;
+            this.phone = response2.data[0].phone;
+          });
       });
   },
 };
@@ -147,12 +151,13 @@ export default {
   list-style-type: none;
 }
 
-.exhibitor {
+.exhibitor-logo {
   width: 120px;
 }
 
-.exhibitor img {
+.exhibitor-logo img {
   width: 100%;
+  object-fit: contain;
 }
 
 .product {
@@ -201,13 +206,8 @@ export default {
     align-items: center;
   }
   .product-detail {
-    width: 100%;
-    /* display: flex;
+    display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-content: center;
-    align-items: center; */
-    columns: 1;
   }
 
   .product {
@@ -217,6 +217,22 @@ export default {
     justify-content: center;
     align-content: center;
     align-items: center;
+  }
+
+  .exhibitor-logo {
+    width: 20px;
+  }
+
+  .image-container {
+    margin: auto;
+  }
+
+  .image-container img {
+    max-width: 360px;
+  }
+
+  .images {
+    max-width: 300px;
   }
 }
 </style>

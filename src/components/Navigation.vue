@@ -172,7 +172,12 @@ a:active {
     display: flex;
     flex-direction: column;
     min-width: 100%;
+
+    max-height: 500px;
+    border-bottom: 3px solid black;
   }
+
+  
 
   .navigation-menu  {
     width: 100%;
