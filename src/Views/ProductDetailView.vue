@@ -14,9 +14,7 @@
         <div class="icons">
           <li v-if="phone">telefon: {{ phone }}</li>
           <hr>
-          <li class="upit" v-if="email">
-            <a :href="mailto">POŠALJITE UPIT</a>
-          </li>
+          
 
           <!-- <img
               class="phone_icon"
