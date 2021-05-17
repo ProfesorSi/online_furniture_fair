@@ -14,7 +14,7 @@
         <div class="icons">
           <li v-if="phone">telefon: {{ phone }}</li>
           <li v-if="email">
-            <a href="mailto:edis.sijaric95@gmail.com">{{ email }}</a>
+            <a :href="mailto">{{ email }}</a>
           </li>
 
           <!-- <img
@@ -106,6 +106,7 @@ export default {
             this.exhibitorImageURL = response2.data[0].imageURL;
             this.email = response2.data[0].email;
             this.phone = response2.data[0].phone;
+            this.mailto = `mailto:` + this.email;
           });
       });
   },
@@ -225,6 +226,7 @@ export default {
 
   .image-container {
     margin: auto;
+    
   }
 
   .image-container img {
@@ -233,6 +235,9 @@ export default {
 
   .images {
     max-width: 300px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
   }
 }
 </style>

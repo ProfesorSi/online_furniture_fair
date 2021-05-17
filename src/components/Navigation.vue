@@ -172,19 +172,16 @@ a:active {
     display: flex;
     flex-direction: column;
     min-width: 100%;
-
+    background: white;
     max-height: 500px;
     border-bottom: 3px solid black;
   }
 
-  
-
-  .navigation-menu  {
+  .navigation-menu {
     width: 100%;
-   margin-left: 80px;
-   text-align: center;
+    margin-left: 80px;
+    text-align: center;
   }
-
 }
 
 @media (min-width: 761px) {
