@@ -13,6 +13,8 @@
         <h3>{{ exhibitor }}</h3>
         <div class="icons">
           <li v-if="phone">telefon: {{ phone }}</li>
+          <hr>
+          <h2 class="upit">POŠALJITE UPIT</h2>
           <li v-if="email">
             <a :href="mailto">{{ email }}</a>
           </li>
@@ -48,6 +50,11 @@
         <h3>{{ title }}</h3>
         <p>{{ description }}</p>
         <p class="price" v-if="price">{{ price }}KM</p>
+
+        <h2>POŠALJITE UPIT</h2>
+         <li v-if="email">
+            <a :href="mailto">{{ email }}</a>
+          </li>
       </div>
     </div>
   </div>
@@ -114,6 +121,10 @@ export default {
 
 
 <style scoped>
+
+.upit {
+  display: none;
+}
 .image1,
 .image2,
 .image3 {
@@ -216,6 +227,10 @@ export default {
 }
 
 @media only screen and (max-width: 1000px) {
+
+  .upit {
+    display: block;
+  }
   .header {
     display: flex;
     flex-direction: column;
