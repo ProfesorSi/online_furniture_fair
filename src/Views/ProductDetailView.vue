@@ -114,6 +114,15 @@ export default {
 
 
 <style scoped>
+.image1, .image2, .image3 {
+  transition: transform 0.2s;
+}
+
+.image1:hover, .image2:hover, .image3:hover {
+  transform: scale(3.5); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+  margin-left: auto;
+}
+
 .product-detail {
   width: 100%;
 }
@@ -197,7 +206,7 @@ export default {
   padding: 2px;
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 1000px) {
   .header {
     display: flex;
     flex-direction: column;
@@ -225,7 +234,6 @@ export default {
 
   .image-container {
     margin: auto;
-    
   }
 
   .image-container img {
