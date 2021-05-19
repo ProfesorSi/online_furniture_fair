@@ -48,7 +48,7 @@
         <p>{{ description }}</p>
         <p class="price" v-if="price">{{ price }}KM</p>
 
-        <h2>POŠALJITE UPIT</h2>
+        <h2 v-if="email">POŠALJITE UPIT</h2>
          <li v-if="email">
             <a :href="mailto">{{ email }}</a>
           </li>
