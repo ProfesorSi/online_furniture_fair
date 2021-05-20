@@ -100,7 +100,7 @@
       ><img
         class="image"
         alt="Izdvojeno"
-        src="../images/partners/corpus.jpg"
+        src="../images/partners/corpus.png"
     /></a>
     </div>
   </div>

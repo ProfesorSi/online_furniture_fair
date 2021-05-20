@@ -60,7 +60,7 @@
       ><img
         class="image"
         alt="Izdvojeno"
-        src="../images/partners/corpus.jpg"
+        src="../images/partners/corpus.png"
     /></a>
     <a href="https://fmroi.gov.ba/" target="_blank"
       ><div class="image">
