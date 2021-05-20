@@ -50,13 +50,13 @@
         <p>VANJSKOTRGOVINSKA KOMORA BOSNE I HERCEGOVINE</p>
       </div></a
     >
-    <a href="https://wmta-edu.com/eng/home-page/" target="_blank"
+    <a href="https://wmta-edu.com/" target="_blank"
       ><img
         class="image"
         alt="Izdvojeno"
         src="../images/partners/obrazovanje_odraslih.png"
     /></a>
-     <a href="https://wmta-edu.com/eng/software-solutions/" target="_blank"
+     <a href="https://corpus.hr/en/pages/" target="_blank"
       ><img
         class="image"
         alt="Izdvojeno"
