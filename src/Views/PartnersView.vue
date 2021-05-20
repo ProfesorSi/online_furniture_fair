@@ -56,6 +56,12 @@
         alt="Izdvojeno"
         src="../images/partners/obrazovanje_odraslih.png"
     /></a>
+     <a href="#" target="_blank"
+      ><img
+        class="image"
+        alt="Izdvojeno"
+        src="../images/partners/bapas.jpg"
+    /></a>
      <a href="https://corpus.hr/en/pages/" target="_blank"
       ><img
         class="image"
