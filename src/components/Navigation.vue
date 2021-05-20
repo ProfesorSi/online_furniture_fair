@@ -96,6 +96,12 @@
           alt="Izdvojeno"
           src="../images/partners/stanpromet.png"
       /></a>
+        <a href="https://corpus.hr/en/pages/" target="_blank"
+      ><img
+        class="image"
+        alt="Izdvojeno"
+        src="../images/partners/corpus.jpg"
+    /></a>
     </div>
   </div>
 </template>
