@@ -81,6 +81,7 @@
         </li>
       </ul>
     </div>
+
     <div id="sponsors">
       <h2>SPONZORI</h2>
       <a href="https://wmta-edu.com/" target="_blank"
@@ -96,12 +97,9 @@
           alt="Izdvojeno"
           src="../images/partners/stanpromet.png"
       /></a>
-        <a href="https://corpus.hr/en/pages/" target="_blank"
-      ><img
-        class="image"
-        alt="Izdvojeno"
-        src="../images/partners/corpus.png"
-    /></a>
+      <a href="https://corpus.hr/en/pages/" target="_blank"
+        ><img class="image" alt="Izdvojeno" src="../images/partners/corpus.png"
+      /></a>
     </div>
   </div>
 </template>
@@ -117,19 +115,6 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-#sponsors {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-content: center;
-  align-items: center;
-  width: 300px;
-}
-
-#sponsors img {
-  width: 140px;
-}
-
 .navigation {
   display: flex;
   flex-direction: column;
@@ -199,20 +184,32 @@ a:active {
   margin-left: 40px;
 }
 
+#sponsors {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  width: 300px;
+}
+
+#sponsors img {
+  width: 140px;
+}
+
 @media screen and (max-width: 800px) {
   .icon {
     width: 100%;
   }
 
   .navigation {
-    margin: 0;
     margin-bottom: 30px;
     display: flex;
     flex-direction: column;
     min-width: 100%;
     background: white;
-    max-height: 500px;
     border-bottom: 3px solid black;
+    height: auto;
   }
 
   .navigation-menu {
