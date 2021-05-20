@@ -81,8 +81,27 @@
         </li>
       </ul>
     </div>
+    <div id="sponsors">
+      <h2>SPONZORI</h2>
+      <a href="https://wmta-edu.com/" target="_blank"
+        ><img
+          class="image"
+          alt="Izdvojeno"
+          src="../images/partners/obrazovanje_odraslih.png"
+      /></a>
+
+      <a href="https://www.stanpromet.ba/realestate-sarajevo" target="_blank">
+        <img
+          class="image stan"
+          alt="Izdvojeno"
+          src="../images/partners/stanpromet.png"
+      /></a>
+    </div>
   </div>
 </template>
+
+
+   
 
 <script>
 export default {
@@ -92,6 +111,19 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+#sponsors {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  width: 300px;
+}
+
+#sponsors img {
+  width: 140px;
+}
+
 .navigation {
   display: flex;
   flex-direction: column;
